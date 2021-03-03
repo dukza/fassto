@@ -21,11 +21,16 @@ $brand-green:#00855B;
   flex-direction: column;    
   justify-content: center;
   margin-right: 0.8rem;
+  &.active{
+    .icon{
+      border:3px solid $brand-green;
+    }
+    
+  }
   .icon{
     text-align: center;
     background-color: #fff;
     border-radius: 50rem;
-    margin: 3px;
     width: 64px;
     height: 64px;
     display: flex;
@@ -44,6 +49,7 @@ $brand-green:#00855B;
     margin-top: 0.8rem;
   }  
 }
+
 .list{
   color: $ink-dark;
   font-size: 1.5rem;

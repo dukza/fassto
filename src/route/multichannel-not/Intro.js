@@ -1,4 +1,5 @@
 import React,{useState, useContext} from 'react';
+import classNames from "classnames";
 import {
 history
   } from "react-router-dom";
@@ -16,13 +17,16 @@ import { LayoutContext } from "../../hooks/context";
 
 const Intro = ({match,history}) => {
     const {getData} = useData();
-    const [isShop,setShop] = useState(1);
+    const [isShop,setShop] = useState(0);
+    const [isSelect,setSelect] = useState(0);
     const {nots} = getData(isShop);
     const { shops } = useContext(LayoutContext);
     const toggleShop = (id) => {
         setShop(id)
+        setSelect(id)
     }
-    const shop = shops.find(shop => shop.url === match.params.shop);   
+    const shop = shops.find(shop => shop.url === match.params.shop);  
+ 
     return(
         <>
             <div className="navigation bg-brand-greenLight">
@@ -31,27 +35,15 @@ const Intro = ({match,history}) => {
             <div className="content" >
                 <div style={{'overflowX':"hidden"}}>
                     <div className="d-flex flex-row justify-content-between align-items-center bg-brand-greenLight sectionType" style={{'overflowX':"auto"}}>
-                        {/* <Select
-                        item__classname ="flex-grow-1"
-                        formWrap__classname="flex-grow-1 w-100"
-                        >
-                        {shops.map((shop,index)=>{
+
+                        {shops.map((shop)=>{
+                            const classes = classNames(
+                                "btn-circle",
+                                isSelect === shop.id && "active"
+                            ); 
                             return(
-                            <option key={index}>{shop.name}</option>
-                        )})}
-                        </Select> */}
-                        <span onClick={()=>toggleShop(shop.id)}>
-                            <div className="btn-circle">
-                                <span className="icon">
-                                    <span className={`icon--icon`}></span>
-                                </span>
-                                <div className="icon--text">전체</div>
-                            </div>
-                        </span>
-                        {shops.map((shop,index)=>{
-                            return(
-                            <span key={index} onClick={()=>toggleShop(shop.id)}>
-                                <div className="btn-circle">
+                            <span key={shop.id} onClick={()=>toggleShop(shop.id)}>
+                                <div className={classes}>
                                     <span className="icon">
                                         {shop.url ==="shoplinker" ? <span className="icon--icon icon-shoplinker"><span className="path1"></span><span className="path2"></span><span className="path3"></span><span className="path4"></span><span className="path5"></span><span className="path6"></span><span className="path7"></span></span>:<span className={`icon--icon icon-${shop.url}`}></span>}
                                     </span>
