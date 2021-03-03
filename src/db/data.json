@@ -1,0 +1,866 @@
+{
+    "multichannel":
+        {
+            "shops":[{
+                "id":1,
+                "url":"smartstore",
+                "name":"스마트스토어",
+                "components" : [
+                    {
+                        "id": "serviceUsable",
+                        "label" : "",
+                        "classname":"",
+                        "indicator" : false,
+                        "contents" : [
+                            { 
+                                "id": 1,
+                                "item__classname":"flex-row",
+                                "label" : "연동서비스 이용여부" ,
+                                "indicator" : true ,
+                                "type" : "Switch",
+                                "checked" : true
+                            }
+                        ],
+                        "formHint"  : ""
+                    },
+                    {
+                        "id": "account",
+                        "label" : "",
+                        "classname":"",
+                        "indicator" : false,
+                        "contents" : [
+                            { "id": 1,
+                              "item__classname":"flex-column",
+                              "label" : "API 연동용 판매자 ID" ,
+                              "formLabel__classname":"w-100 formLabel formLabel-multichannel",
+                              "indicator" : true ,
+                              "formWrap__classname":"w-100 flex-grow-1",
+                              "type" : "Input",
+                              "value" : "ncp_1abc0d_01",
+                              "size":"w-100",
+                              "formHint"  : ""
+                            }
+                        ]
+                    }, 
+                    {
+                        "id": "date",
+                        "label" : "",
+                        "classname":"",
+                        "indicator" : true,
+                        "contents" : [
+                            { "id": 1,
+                              "item__classname":"flex-row",
+                              "label" : "연동 시작일" ,
+                              "indicator" : true ,
+                              "type" : "Button",
+                              "state":"btn-outline-secondary d-flex justify-content-between align-items-center",
+                              "size" : "w-100",
+                              "formLabel":"연동 시작일",
+                              "formLabel__classname":"formLabel-multichannel",
+                              "children":"YYYY년 MM월 DD일 ",
+                              "icon":"calendar",
+                              "formHint"  : ""
+                            }
+                        ]
+                    }, 
+                    {
+                        "id": "linkRole",
+                        "label" : "",
+                        "classname":"",
+                        "indicator" : false,
+                        "contents" : [
+                            { "id": 1,
+                              "item__classname":"flex-column",
+                              "label" : "주문수집방법" ,
+                              "formLabel__classname":"w-100",
+                              "indicator" : true ,
+                              "formWrap__classname":"flex-grow-1 w-100",
+                              "type" : "Select",
+                              "size" : "w-100",
+                              "childrens" : ["평일 2시간마다 자동수집(8:00~20:00에 동작)","출고관리>택배신청에서 ‘쇼핑몰 주문 가져오기’버튼을 눌러서 수집"],
+                              "formHint"  : ""
+                            }
+                        ]
+                    },
+                    {
+                        "id": "linkTarget",
+                        "label" : "주문 수집 설정",
+                        "classname":"",
+                        "indicator" : true,
+                        "contents" : [
+                            { "id": 1,
+                              "item__classname":"flex-row",
+                              "label" : "수집 할 주문 상태" ,
+                              "formLabel__classname":"formLabel-multichannel",
+                              "indicator" : true ,
+                              "formWrap__classname":"flex-grow-1",
+                              "type" : "Select",
+                              "size" : "",
+                              "childrens" : ["결제완료","발주확인","결제완료+발주확인"]
+                            },
+                            { "id": 1,
+                                "item__classname":"flex-row p8-t",
+                                "label" : "수집 기준 시간" ,
+                                "formLabel__classname":"formLabel-multichannel",
+                                "indicator" : true ,
+                                "formWrap__classname":"flex-grow-1",
+                                "type" : "Select",
+                                "size" : "",
+                                "childrens" : ["결제 10분후 주문건","결제 20분후 주문건","결제 30분후 주문건","결제 40분후 주문건","결제 50분후 주문건","결제 1시간후 주문건","결제 1시간 10분후 주문건","결제 1시간 20분후 주문건","결제 1시간 30분후 주문건","결제 1시간 40분후 주문건","결제 1시간 50분후 주문건","결제 2시간 주문건"],
+                                "formHint"  : "구매고객이 구매취소할 수 있는 시간적 여유를 10분 이상 주는 것을 권장합니다. FMS>출고관리>택배신청에 주문이 자동 수집되면 주문이 발주확인 처리되므로, 구매고객이 취소요청했을 경우 판매자가 취소승인처리를 하여야 합니다.",
+                                "formHint__classname":""
+                              }
+                        ]
+
+                    }, 
+                    {
+                        "id": "linkRange",
+                        "label" : "",
+                        "classname":"",
+                        "indicator" : true,
+                        "contents" : [
+                            { "id": 1,
+                              "item__classname":"flex-row",
+                              "label" : "일일수집범위" ,
+                              "formLabel__classname":"formLabel-multichannel",
+                              "indicator" : true ,
+                              "formWrap__classname":"flex-grow-1",
+                              "type" : "Select",
+                              "size" : "",
+                              "childrens" : ["영업일 6일 전 주문","영업일 7일 전 주문"],
+                               "formHint"  : "이미 자동 수집된 주문은 중복 등록되지 않습니다."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "linkType",
+                        "label" : "",
+                        "classname":"",
+                        "indicator" : false,
+                        "contents" : [
+                            { 
+                                "id": 1,
+                                "item__classname":"flex-row",
+                                "label" : "부분출고여부" ,
+                                "indicator" : true ,
+                                "type" : "Switch",
+                                "checked" : true,
+                                "formHint"  : "하나의 주문서에 일부 상품만 재고가 있고 나머지 상품은 재고가 없을 경우 재고가 있는 상품만 우선 택배신청 등록됩니다."
+                            }
+                        ]
+                        
+                    },
+                    {
+                        "id": "linkNumber",
+                        "label" : "",
+                        "classname":"",
+                        "indicator" : false,
+                        "contents" : [
+                            { 
+                                "id": 1,
+                                "item__classname":"flex-row",
+                                "label" : "송장등록여부" ,
+                                "indicator" : true ,
+                                "type" : "Switch",
+                                "checked" : true,
+                                "formHint"  : "쇼핑몰에 송장번호를 자동으로 등록합니다.자동등록을 사용하실 경우, 매일 30분마다 쇼핑몰에 송장번호가 자동 등록됩니다. 송장번호가 등록되면 주문상태는 ‘발송처리’ 상태로 변경됩니다. 스마트스토어의 판매관리>배송현황 관리에서 확인하실 수 있습니다."
+                            }
+                        ]
+                        
+                    },
+                    {
+                        "id": "linkInfo",
+                        "label" : "송장표시정보",
+                        "classname":"",
+                        "indicator" : true,
+                        "contents" : [
+                            { "id": 1,
+                              "item__classname":"flex-row",
+                              "label" : "보내는 사람 이름" ,
+                              "formLabel__classname":"formLabel-multichannel",
+                              "indicator" : true ,
+                              "formWrap__classname":"flex-grow-1",
+                              "type" : "Select",
+                              "size" : "",
+                              "childrens" : ["고객사의 이름 (예: {(주)제제Lab})","주문자의 이름 (예: 홍길동)"]
+                            },
+                            { "id": 1,
+                                "item__classname":"flex-row p8-t",
+                                "label" : "보내는 사람 연락처" ,
+                                "formLabel__classname":"formLabel-multichannel",
+                                "indicator" : true ,
+                                "formWrap__classname":"flex-grow-1",
+                                "type" : "Select",
+                                "size" : "",
+                                "childrens" : ["고객사의 연락처: {02-1234-1234} ","보내는 분의 연락처"],
+                                "formHint"  : "",
+                                "formHint__classname":""
+                              }
+                        ]
+                    },
+                    {
+                        "id": "linkAddress",
+                        "label" : "",
+                        "classname":"border-none",
+                        "indicator" : false,
+                        "contents" : [
+                            { "id": 1,
+                              "item__classname":"flex-column",
+                              "label" : "쇼핑몰 주소(URL)" ,
+                              "formLabel__classname":"w-100 formLabel formLabel-multichannel",
+                              "indicator" : true ,
+                              "formWrap__classname":"w-100 flex-grow-1 ",
+                              "type" : "Input",
+                              "value" : "https://smartstore.naver.com/shopshopshop",
+                              "size":"w-100 font-12",
+                              "formHint"  : ""
+                            }
+                        ]
+                    }
+                ],
+                "nots" : [
+                    {
+                        "name":"방한경",
+                        "phone":"010-9978-7769",
+                        "number":"상품주문 20200823123344",
+                        "state":"송장등록",
+                        "reason":"주문서의 주소가 유효하지 않음"  ,
+                        "date":"2020.06.10 16:00"   
+                    }
+                ]
+            },{
+                "id":2,
+                "url":"godo",
+                "name":"고도몰",
+                "components" : [
+                    {
+                        "id": "serviceUsable",
+                        "label" : "",
+                        "classname":"",
+                        "indicator" : false,
+                        "contents" : [
+                            { 
+                                "id": 1,
+                                "item__classname":"flex-row",
+                                "label" : "연동서비스 이용여부" ,
+                                "indicator" : true ,
+                                "type" : "Switch",
+                                "checked" : true
+                            }
+                        ],
+                        "formHint"  : ""
+                    },
+                    {
+                        "id": "linkAddress",
+                        "label" : "",
+                        "classname":"",
+                        "indicator" : false,
+                        "contents" : [
+                            { "id": 1,
+                              "item__classname":"flex-column",
+                              "label" : "쇼핑몰 주소(URL)" ,
+                              "formLabel__classname":"w-100 formLabel formLabel-multichannel",
+                              "indicator" : true ,
+                              "formWrap__classname":"w-100 flex-grow-1",
+                              "form__side":"",
+                              "type" : "Input",
+                              "value" : "testshop.godomall.com",
+                              "size":"w-100",
+                              "formHint"  : "고도몰로 제작한 쇼핑몰의 주소"
+                            }
+                        ]
+                    }, 
+                    {
+                        "id": "linkCode",
+                        "label" : "",
+                        "indicator" : false,
+                        "contents" : [
+                            { "id": 1,
+                              "item__classname":"flex-column",
+                              "label" : "서비스 코드" ,
+                              "formLabel__classname":"w-100 formLabel formLabel-multichannel",
+                              "indicator" : true ,
+                              "formWrap__classname":"w-100 d-flex align-items-center",
+                              "form__side":"조회하기",
+                              "type" : "Input",
+                              "value" : "fssdev01",
+                              "size":"flex-grow-1",
+                              "formHint"  : ""
+                            }
+                        ]
+                    },
+                    {
+                        "id": "linkKey",
+                        "label" : "",
+                        "classname":"",
+                        "indicator" : false,
+                        "contents" : [
+                            { "id": 1,
+                              "item__classname":"flex-column",
+                              "label" : "사용자 키(Key)" ,
+                              "formLabel__classname":"w-100 formLabel formLabel-multichannel",
+                              "indicator" : true ,
+                              "formWrap__classname":"w-100 flex-grow-1",
+                              "form__side":"",
+                              "type" : "Input",
+                              "form__type":"textarea",
+                              "value" : "JUI2JUZCJTdDJTBDJUQ1JTVCJTJBJTBBYyU5RkJzUCVENCVCRSUxMyVCQ3RVZCUxNSVEQiU4RiU4RCVDQSUwRiVBQ1olRjAlQUMlMjElQUElRkNJJTg0JTAzJTE3JUI0JTlDJTNERiUwOCVCRCUwRA",
+                              "size":"w-100",
+                              "formHint"  : "고도몰 파워서비스>부가서비스에서 'FSS 물류대행 서비스'를 신청해 주세요. 고도몰로부터 메일로 사용자 키를 발송합니다.*FSS 홈페이지에서 서비스 신청하신 분도 고도몰에서 신청해 주세요."
+                            }
+                        ]
+                    }, 
+                    {
+                        "id": "date",
+                        "label" : "",
+                        "classname":"",
+                        "indicator" : true,
+                        "contents" : [
+                            { "id": 1,
+                              "item__classname":"flex-row",
+                              "label" : "연동 시작일" ,
+                              "indicator" : true ,
+                              "type" : "Button",
+                              "state":"btn-outline-secondary d-flex justify-content-between align-items-center",
+                              "size" : "w-100",
+                              "formLabel":"연동 시작일","formLabel__classname":"formLabel-multichannel",
+                              "children":"YYYY년 MM월 DD일 ",
+                              "icon":"calendar",
+                              "formHint"  : ""
+                            }
+                        ]
+                    }, 
+                    {
+                        "id": "linkRole",
+                        "label" : "",
+                        "classname":"",
+                        "indicator" : false,
+                        "contents" : [
+                            { "id": 1,
+                              "item__classname":"flex-column",
+                              "label" : "주문수집방법" ,
+                              "formLabel__classname":"w-100",
+                              "indicator" : true ,
+                              "formWrap__classname":"flex-grow-1 w-100",
+                              "type" : "Select",
+                              "size" : "w-100",
+                              "childrens" : ["평일 2시간마다 자동수집(8:00~20:00에 동작)","출고관리>택배신청에서 ‘쇼핑몰 주문 가져오기’버튼을 눌러서 수집"],
+                              "formHint"  : ""
+                            }
+                        ]
+                    },
+                    {
+                        "id": "linkTarget",
+                        "label" : "주문 수집 설정",
+                        "classname":"",
+                        "indicator" : true,
+                        "contents" : [
+                            { "id": 1,
+                              "item__classname":"flex-row",
+                              "label" : "수집 할 주문 상태" ,
+                              "formLabel__classname":"formLabel-multichannel",
+                              "indicator" : true ,
+                              "formWrap__classname":"flex-grow-1",
+                              "type" : "Select",
+                              "size" : "",
+                              "childrens" : ["결제완료","발주확인","결제완료+발주확인"]
+                            },
+                            { "id": 1,
+                                "item__classname":"flex-row p8-t",
+                                "label" : "수집 기준 시간" ,
+                                "formLabel__classname":"formLabel-multichannel",
+                                "indicator" : true ,
+                                "formWrap__classname":"flex-grow-1",
+                                "type" : "Select",
+                                "size" : "",
+                                "childrens" : ["결제 10분후 주문건","결제 20분후 주문건","결제 30분후 주문건","결제 40분후 주문건","결제 50분후 주문건","결제 1시간후 주문건","결제 1시간 10분후 주문건","결제 1시간 20분후 주문건","결제 1시간 30분후 주문건","결제 1시간 40분후 주문건","결제 1시간 50분후 주문건","결제 2시간 주문건"],
+                                "formHint"  : "구매고객이 구매취소할 수 있는 시간적 여유를 10분 이상 주는 것을 권장합니다. FMS>출고관리>택배신청에 주문이 자동 수집되면 주문이 발주확인 처리되므로, 구매고객이 취소요청했을 경우 판매자가 취소승인처리를 하여야 합니다.",
+                                "formHint__classname":""
+                              }
+                        ]
+
+                    }, 
+                    {
+                        "id": "linkRange",
+                        "label" : "",
+                        "classname":"",
+                        "indicator" : true,
+                        "contents" : [
+                            { "id": 1,
+                              "item__classname":"flex-row",
+                              "label" : "일일수집범위" ,
+                              "formLabel__classname":"formLabel-multichannel",
+                              "indicator" : true ,
+                              "formWrap__classname":"flex-grow-1",
+                              "type" : "Select",
+                              "size" : "",
+                              "childrens" : ["영업일 6일 전 주문","영업일 7일 전 주문"],
+                               "formHint"  : "이미 자동 수집된 주문은 중복 등록되지 않습니다."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "linkNumber",
+                        "label" : "",
+                        "classname":"",
+                        "indicator" : false,
+                        "contents" : [
+                            { 
+                                "id": 1,
+                                "item__classname":"flex-row",
+                                "label" : "송장등록여부" ,
+                                "indicator" : true ,
+                                "type" : "Switch",
+                                "checked" : true,
+                                "formHint"  : "쇼핑몰에 송장번호를 자동으로 등록합니다.자동등록을 사용하실 경우, 매일 30분마다 쇼핑몰에 송장번호가 자동 등록됩니다. 송장번호가 등록되면 주문상태는 ‘발송처리’ 상태로 변경됩니다. 스마트스토어의 판매관리>배송현황 관리에서 확인하실 수 있습니다."
+                            }
+                        ]
+                        
+                    },
+                    {
+                        "id": "linkInfo",
+                        "label" : "송장표시정보",
+                        "classname":"border-none",
+                        "indicator" : true,
+                        "contents" : [
+                            { "id": 1,
+                              "item__classname":"flex-row",
+                              "label" : "보내는 사람 이름" ,
+                              "formLabel__classname":"formLabel-multichannel",
+                              "indicator" : true ,
+                              "formWrap__classname":"flex-grow-1",
+                              "type" : "Select",
+                              "size" : "",
+                              "childrens" : ["고객사의 이름 (예: {(주)제제Lab})","주문자의 이름 (예: 홍길동)"]
+                            },
+                            { "id": 1,
+                                "item__classname":"flex-row p8-t",
+                                "label" : "보내는 사람 연락처" ,
+                                "formLabel__classname":"formLabel-multichannel",
+                                "indicator" : true ,
+                                "formWrap__classname":"flex-grow-1",
+                                "type" : "Select",
+                                "size" : "",
+                                "childrens" : ["고객사의 연락처: {02-1234-1234} ","보내는 분의 연락처"],
+                                "formHint"  : "",
+                                "formHint__classname":""
+                              }
+                        ]
+                    }
+                ]
+            },{
+                "id":3,
+                "url":"sabangnet",
+                "name":"사방넷",
+                "components" : [
+                    {
+                        "id": "serviceUsable",
+                        "label" : "",
+                        "classname":"",
+                        "indicator" : false,
+                        "contents" : [
+                            { 
+                                "id": 1,
+                                "item__classname":"flex-row",
+                                "label" : "연동서비스 이용여부" ,
+                                "indicator" : true ,
+                                "type" : "Switch",
+                                "checked" : true
+                            }
+                        ],
+                        "formHint"  : ""
+                    },
+                    {
+                        "id": "linkId",
+                        "label" : "",
+                        "classname":"",
+                        "indicator" : false,
+                        "contents" : [
+                            { "id": 1,
+                              "item__classname":"flex-column",
+                              "label" : "사방넷 로그인 ID" ,
+                              "formLabel__classname":"w-100 formLabel formLabel-multichannel",
+                              "indicator" : true ,
+                              "formWrap__classname":"w-100 flex-grow-1",
+                              "form__side":"",
+                              "type" : "Input",
+                              "value" : "testid",
+                              "size":"w-100",
+                              "formHint"  : "사방넷에 로그인하는 아이디입니다."
+                            }
+                        ]
+                    }, 
+                    {
+                        "id": "linkCode",
+                        "label" : "",
+                        "indicator" : false,
+                        "contents" : [
+                            { "id": 1,
+                                "item__classname":"flex-column",
+                                "label" : "서비스 코드" ,
+                                "formLabel__classname":"w-100 formLabel formLabel-multichannel",
+                                "indicator" : true ,
+                                "formWrap__classname":"w-100 d-flex align-items-center",
+                                "type" : "Input",
+                                "value" : "fssdev01",
+                                "size":"flex-grow-1",
+                                "formHint"  : ""
+                            }
+                        ]
+                    },
+                    {
+                        "id": "linkey",
+                        "label" : "",
+                        "indicator" : false,
+                        "contents" : [
+                            { "id": 1,
+                                "item__classname":"flex-column",
+                                "label" :"사용자 키(Key)" ,
+                                "formLabel__classname":"w-100 formLabel formLabel-multichannel",
+                                "indicator" : true ,
+                                "formWrap__classname":"w-100 d-flex align-items-center",
+                                "form__side":"인증",
+                                "type" : "Input",
+                                "value" : "EBXJBNPMW5EuY66G2X99M6YdKJN28EM0",
+                                "size":"flex-grow-1",
+                                "formHint"  : "사방넷 고객센터(1599-1311)로 전화하여 API 연동 Key를 발급받으실 수 있습니다. 사방넷에서 요금 정산 후 API 연동 Key를 메일로 발송해 드립니다."
+                            }
+                        ]
+                    }, 
+                    {
+                        "id": "date",
+                        "label" : "",
+                        "classname":"",
+                        "indicator" : true,
+                        "contents" : [
+                            { "id": 1,
+                              "item__classname":"flex-row",
+                              "label" : "연동 시작일" ,
+                              "indicator" : true ,
+                              "type" : "Button",
+                              "state":"btn-outline-secondary d-flex justify-content-between align-items-center",
+                              "size" : "w-100",
+                              "formLabel":"연동 시작일",
+                              "formLabel__classname":"formLabel-multichannel",
+                              "children":"YYYY년 MM월 DD일 ",
+                              "icon":"calendar",
+                              "formHint"  : ""
+                            }
+                        ]
+                    }, 
+                    {
+                        "id": "linkRole",
+                        "label" : "",
+                        "classname":"",
+                        "indicator" : false,
+                        "contents" : [
+                            { "id": 1,
+                              "item__classname":"flex-column",
+                              "label" : "주문수집방법" ,
+                              "formLabel__classname":"w-100",
+                              "indicator" : true ,
+                              "formWrap__classname":"flex-grow-1 w-100",
+                              "type" : "Select",
+                              "size" : "w-100",
+                              "childrens" : ["평일 2시간마다 자동수집(8:00~20:00에 동작)","출고관리>택배신청에서 ‘쇼핑몰 주문 가져오기’버튼을 눌러서 수집"],
+                              "formHint"  : ""
+                            }
+                        ]
+                    },
+                    {
+                        "id": "linkTarget",
+                        "label" : "",
+                        "classname":"",
+                        "indicator" : true,
+                        "contents" : [
+                            { "id": 1,
+                              "item__classname":"flex-column",
+                              "label" : "주문 수집 대상" ,
+                              "formLabel__classname":"w-100",
+                              "indicator" : true ,
+                              "formWrap__classname":"flex-grow-1 w-100",
+                              "type" : "Input",
+                              "value":"사방넷의 ‘주문확인’ 상태의 주문을 수집",
+                              "size" : "w-100 border-none p-0",
+                              "formHint":"사방넷 D주문관리 >【11】주문서확인처리에서 주문을 체크하고 '주문상태변경'버튼을 눌러 주문상태를 '주문확인’으로 변경한 주문입니다."
+                            }
+                        ]
+
+                    }, 
+                    {
+                        "id": "linkRange",
+                        "label" : "",
+                        "classname":"",
+                        "indicator" : true,
+                        "contents" : [
+                            { "id": 1,
+                              "item__classname":"flex-row",
+                              "label" : "일일수집범위" ,
+                              "formLabel__classname":"formLabel-multichannel",
+                              "indicator" : true ,
+                              "formWrap__classname":"flex-grow-1",
+                              "type" : "Select",
+                              "size" : "",
+                              "childrens" : ["영업일 6일 전 주문","영업일 7일 전 주문"],
+                               "formHint"  : "이미 자동 수집된 주문은 중복 등록되지 않습니다."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "linkNumber",
+                        "label" : "",
+                        "classname":"",
+                        "indicator" : false,
+                        "contents" : [
+                            { 
+                                "id": 1,
+                                "item__classname":"flex-row",
+                                "label" : "송장등록여부" ,
+                                "indicator" : true ,
+                                "type" : "Switch",
+                                "checked" : true,
+                                "formHint"  : "자동등록을 사용하실 경우, 매일 30분마다 쇼핑몰에 송장번호가 자동 등록됩니다. 송장번호가 등록되면 주문상태는 ‘발송처리’ 상태로 변경됩니다. 사방넷의 D주문관리 >【11】주문서확인처리에서 확인하실 수 있습니다."
+                            }
+                        ]
+                        
+                    },
+                    {
+                        "id": "linkInfo",
+                        "label" : "송장표시정보",
+                        "classname":"border-none",
+                        "indicator" : true,
+                        "contents" : [
+                            { "id": 1,
+                              "item__classname":"flex-row",
+                              "label" : "보내는 사람 이름" ,
+                              "formLabel__classname":"formLabel-multichannel",
+                              "indicator" : true ,
+                              "formWrap__classname":"flex-grow-1",
+                              "type" : "Select",
+                              "size" : "",
+                              "childrens" : ["고객사의 이름 (예: {(주)제제Lab})","주문자의 이름 (예: 홍길동)"]
+                            },
+                            { "id": 1,
+                                "item__classname":"flex-row p8-t",
+                                "label" : "보내는 사람 연락처" ,
+                                "formLabel__classname":"formLabel-multichannel",
+                                "indicator" : true ,
+                                "formWrap__classname":"flex-grow-1",
+                                "type" : "Select",
+                                "size" : "",
+                                "childrens" : ["고객사의 연락처: {02-1234-1234} ","보내는 분의 연락처"],
+                                "formHint"  : "",
+                                "formHint__classname":""
+                              }
+                        ]
+                    }
+                ]
+            },{
+                "id":4,
+                 "url":"shoplinker",
+                "name":"샵링커",
+                "components" : [
+                    {
+                        "id": "serviceUsable",
+                        "label" : "",
+                        "classname":"",
+                        "indicator" : false,
+                        "contents" : [
+                            { 
+                                "id": 1,
+                                "item__classname":"flex-row",
+                                "label" : "연동서비스 이용여부" ,
+                                "indicator" : true ,
+                                "type" : "Switch",
+                                "checked" : true
+                            }
+                        ],
+                        "formHint"  : ""
+                    },
+                    {
+                        "id": "linkId",
+                        "label" : "",
+                        "classname":"",
+                        "indicator" : false,
+                        "contents" : [
+                            { "id": 1,
+                              "item__classname":"flex-column",
+                              "label" : "사방넷 로그인 ID" ,
+                              "formLabel__classname":"w-100 formLabel formLabel-multichannel",
+                              "indicator" : true ,
+                              "formWrap__classname":"w-100 flex-grow-1",
+                              "form__side":"",
+                              "type" : "Input",
+                              "value" : "testid",
+                              "size":"w-100",
+                              "formHint"  : "사방넷에 로그인하는 아이디입니다."
+                            }
+                        ]
+                    }, 
+                    {
+                        "id": "linkCode",
+                        "label" : "",
+                        "indicator" : false,
+                        "contents" : [
+                            { "id": 1,
+                                "item__classname":"flex-column",
+                                "label" : "서비스 코드" ,
+                                "formLabel__classname":"w-100 formLabel formLabel-multichannel",
+                                "indicator" : true ,
+                                "formWrap__classname":"w-100 d-flex align-items-center",
+                                "type" : "Input",
+                                "value" : "fssdev01",
+                                "size":"flex-grow-1",
+                                "formHint"  : ""
+                            }
+                        ]
+                    },
+                    {
+                        "id": "linkey",
+                        "label" : "",
+                        "indicator" : false,
+                        "contents" : [
+                            { "id": 1,
+                                "item__classname":"flex-column",
+                                "label" :"사용자 키(Key)" ,
+                                "formLabel__classname":"w-100 formLabel formLabel-multichannel",
+                                "indicator" : true ,
+                                "formWrap__classname":"w-100 d-flex align-items-center",
+                                "form__side":"인증",
+                                "type" : "Input",
+                                "value" : "EBXJBNPMW5EuY66G2X99M6YdKJN28EM0",
+                                "size":"flex-grow-1",
+                                "formHint"  : "사방넷 고객센터(1599-1311)로 전화하여 API 연동 Key를 발급받으실 수 있습니다. 사방넷에서 요금 정산 후 API 연동 Key를 메일로 발송해 드립니다."
+                            }
+                        ]
+                    }, 
+                    {
+                        "id": "date",
+                        "label" : "",
+                        "classname":"",
+                        "indicator" : true,
+                        "contents" : [
+                            { "id": 1,
+                              "item__classname":"flex-row",
+                              "label" : "연동 시작일" ,
+                              "indicator" : true ,
+                              "type" : "Button",
+                              "state":"btn-outline-secondary d-flex justify-content-between align-items-center",
+                              "size" : "w-100",
+                              "formLabel":"연동 시작일","formLabel__classname":"formLabel-multichannel",
+                              "children":"YYYY년 MM월 DD일 ",
+                              "icon":"calendar",
+                              "formHint"  : ""
+                            }
+                        ]
+                    }, 
+                    {
+                        "id": "linkRole",
+                        "label" : "",
+                        "classname":"",
+                        "indicator" : false,
+                        "contents" : [
+                            { "id": 1,
+                              "item__classname":"flex-column",
+                              "label" : "주문수집방법" ,
+                              "formLabel__classname":"w-100",
+                              "indicator" : true ,
+                              "formWrap__classname":"flex-grow-1 w-100",
+                              "type" : "Select",
+                              "size" : "w-100",
+                              "childrens" : ["평일 2시간마다 자동수집(8:00~20:00에 동작)","출고관리>택배신청에서 ‘쇼핑몰 주문 가져오기’버튼을 눌러서 수집"],
+                              "formHint"  : ""
+                            }
+                        ]
+                    },
+                    {
+                        "id": "linkTarget",
+                        "label" : "",
+                        "classname":"",
+                        "indicator" : true,
+                        "contents" : [
+                            { "id": 1,
+                              "item__classname":"flex-column",
+                              "label" : "주문 수집 대상" ,
+                              "formLabel__classname":"w-100",
+                              "indicator" : true ,
+                              "formWrap__classname":"flex-grow-1 w-100",
+                              "type" : "Input",
+                              "value":"사방넷의 ‘주문확인’ 상태의 주문을 수집",
+                              "size" : "w-100 border-none p-0",
+                              "formHint":"사방넷 D주문관리 >【11】주문서확인처리에서 주문을 체크하고 '주문상태변경'버튼을 눌러 주문상태를 '주문확인’으로 변경한 주문입니다."
+                            }
+                        ]
+
+                    }, 
+                    {
+                        "id": "linkRange",
+                        "label" : "",
+                        "classname":"",
+                        "indicator" : true,
+                        "contents" : [
+                            { "id": 1,
+                              "item__classname":"flex-row",
+                              "label" : "일일수집범위" ,
+                              "formLabel__classname":"formLabel-multichannel",
+                              "indicator" : true ,
+                              "formWrap__classname":"flex-grow-1",
+                              "type" : "Select",
+                              "size" : "",
+                              "childrens" : ["영업일 6일 전 주문","영업일 7일 전 주문"],
+                               "formHint"  : "이미 자동 수집된 주문은 중복 등록되지 않습니다."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "linkNumber",
+                        "label" : "",
+                        "classname":"",
+                        "indicator" : false,
+                        "contents" : [
+                            { 
+                                "id": 1,
+                                "item__classname":"flex-row",
+                                "label" : "송장등록여부" ,
+                                "indicator" : true ,
+                                "type" : "Switch",
+                                "checked" : true,
+                                "formHint"  : "자동등록을 사용하실 경우, 매일 30분마다 쇼핑몰에 송장번호가 자동 등록됩니다. 송장번호가 등록되면 주문상태는 ‘발송처리’ 상태로 변경됩니다. 사방넷의 D주문관리 >【11】주문서확인처리에서 확인하실 수 있습니다."
+                            }
+                        ]
+                        
+                    },
+                    {
+                        "id": "linkInfo",
+                        "label" : "송장표시정보",
+                        "classname":"border-none",
+                        "indicator" : true,
+                        "contents" : [
+                            { "id": 1,
+                              "item__classname":"flex-row",
+                              "label" : "보내는 사람 이름" ,
+                              "formLabel__classname":"formLabel-multichannel",
+                              "indicator" : true ,
+                              "formWrap__classname":"flex-grow-1",
+                              "type" : "Select",
+                              "size" : "",
+                              "childrens" : ["고객사의 이름 (예: {(주)제제Lab})","주문자의 이름 (예: 홍길동)"]
+                            },
+                            { "id": 1,
+                                "item__classname":"flex-row p8-t",
+                                "label" : "보내는 사람 연락처" ,
+                                "formLabel__classname":"formLabel-multichannel",
+                                "indicator" : true ,
+                                "formWrap__classname":"flex-grow-1",
+                                "type" : "Select",
+                                "size" : "",
+                                "childrens" : ["고객사의 연락처: {02-1234-1234} ","보내는 분의 연락처"],
+                                "formHint"  : "",
+                                "formHint__classname":""
+                              }
+                        ]
+                    }
+                ]
+            }]
+        }
+}
