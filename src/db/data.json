@@ -36,6 +36,7 @@
                               "indicator" : true ,
                               "formWrap__classname":"w-100 flex-grow-1",
                               "type" : "Input",
+                              "form__type":"input",
                               "value" : "ncp_1abc0d_01",
                               "size":"w-100",
                               "formHint"  : ""
@@ -211,6 +212,7 @@
                               "indicator" : true ,
                               "formWrap__classname":"w-100 flex-grow-1 ",
                               "type" : "Input",
+                              "form__type":"input",
                               "value" : "https://smartstore.naver.com/shopshopshop",
                               "size":"w-100 font-12",
                               "formHint"  : ""
@@ -220,6 +222,7 @@
                 ],
                 "nots" : [
                     {
+                        "id":1,
                         "name":"방한경",
                         "phone":"010-9978-7769",
                         "number":"상품주문 20200823123344",
@@ -228,7 +231,17 @@
                         "date":"2020.06.10 16:00"   
                     },
                     {
-                        "name":"방한경",
+                        "id":2,
+                        "name":"하덕연",
+                        "phone":"010-9978-7769",
+                        "number":"상품주문 20200823123344",
+                        "state":"송장등록",
+                        "reason":"주문서의 주소가 유효하지 않음"  ,
+                        "date":"2020.06.10 16:00"   
+                    },
+                    {
+                        "id":3,
+                        "name":"김다윤",
                         "phone":"010-9978-7769",
                         "number":"상품주문 20200823123344",
                         "state":"송장등록",
@@ -272,6 +285,7 @@
                               "formWrap__classname":"w-100 flex-grow-1",
                               "form__side":"",
                               "type" : "Input",
+                              "form__type":"input",
                               "value" : "testshop.godomall.com",
                               "size":"w-100",
                               "formHint"  : "고도몰로 제작한 쇼핑몰의 주소"
@@ -291,6 +305,7 @@
                               "formWrap__classname":"w-100 d-flex align-items-center",
                               "form__side":"조회하기",
                               "type" : "Input",
+                              "form__type":"input",
                               "value" : "fssdev01",
                               "size":"flex-grow-1",
                               "formHint"  : ""
@@ -455,6 +470,35 @@
                               }
                         ]
                     }
+                ],
+                "nots" : [
+                    {
+                        "id":1,
+                        "name":"노은종",
+                        "phone":"010-9978-7769",
+                        "number":"상품주문 20200823123344",
+                        "state":"송장등록",
+                        "reason":"주문서의 주소가 유효하지 않음"  ,
+                        "date":"2020.06.10 16:00"   
+                    },
+                    {
+                        "id":2,
+                        "name":"하덕연",
+                        "phone":"010-9978-7769",
+                        "number":"상품주문 20200823123344",
+                        "state":"송장등록",
+                        "reason":"주문서의 주소가 유효하지 않음"  ,
+                        "date":"2020.06.10 16:00"   
+                    },
+                    {
+                        "id":3,
+                        "name":"김다윤",
+                        "phone":"010-9978-7769",
+                        "number":"상품주문 20200823123344",
+                        "state":"송장등록",
+                        "reason":"주문서의 주소가 유효하지 않음"  ,
+                        "date":"2020.06.10 16:00"   
+                    }
                 ]
             },{
                 "id":3,
@@ -492,6 +536,7 @@
                               "formWrap__classname":"w-100 flex-grow-1",
                               "form__side":"",
                               "type" : "Input",
+                              "form__type":"input",
                               "value" : "testid",
                               "size":"w-100",
                               "formHint"  : "사방넷에 로그인하는 아이디입니다."
@@ -510,6 +555,7 @@
                                 "indicator" : true ,
                                 "formWrap__classname":"w-100 d-flex align-items-center",
                                 "type" : "Input",
+                                "form__type":"input",
                                 "value" : "fssdev01",
                                 "size":"flex-grow-1",
                                 "formHint"  : ""
@@ -529,6 +575,7 @@
                                 "formWrap__classname":"w-100 d-flex align-items-center",
                                 "form__side":"인증",
                                 "type" : "Input",
+                                "form__type":"input",
                                 "value" : "EBXJBNPMW5EuY66G2X99M6YdKJN28EM0",
                                 "size":"flex-grow-1",
                                 "formHint"  : "사방넷 고객센터(1599-1311)로 전화하여 API 연동 Key를 발급받으실 수 있습니다. 사방넷에서 요금 정산 후 API 연동 Key를 메일로 발송해 드립니다."
@@ -588,6 +635,7 @@
                               "indicator" : true ,
                               "formWrap__classname":"flex-grow-1 w-100",
                               "type" : "Input",
+                              "form__type":"input",
                               "value":"사방넷의 ‘주문확인’ 상태의 주문을 수집",
                               "size" : "w-100 border-none p-0",
                               "formHint":"사방넷 D주문관리 >【11】주문서확인처리에서 주문을 체크하고 '주문상태변경'버튼을 눌러 주문상태를 '주문확인’으로 변경한 주문입니다."
@@ -662,6 +710,35 @@
                               }
                         ]
                     }
+                ],
+                "nots" : [
+                    {
+                        "id":1,
+                        "name":"김다윤",
+                        "phone":"010-9978-7769",
+                        "number":"상품주문 20200823123344",
+                        "state":"송장등록",
+                        "reason":"주문서의 주소가 유효하지 않음"  ,
+                        "date":"2020.06.10 16:00"   
+                    },
+                    {
+                        "id":2,
+                        "name":"하덕연",
+                        "phone":"010-9978-7769",
+                        "number":"상품주문 20200823123344",
+                        "state":"송장등록",
+                        "reason":"주문서의 주소가 유효하지 않음"  ,
+                        "date":"2020.06.10 16:00"   
+                    },
+                    {
+                        "id":3,
+                        "name":"김다윤",
+                        "phone":"010-9978-7769",
+                        "number":"상품주문 20200823123344",
+                        "state":"송장등록",
+                        "reason":"주문서의 주소가 유효하지 않음"  ,
+                        "date":"2020.06.10 16:00"   
+                    }
                 ]
             },{
                 "id":4,
@@ -699,6 +776,7 @@
                               "formWrap__classname":"w-100 flex-grow-1",
                               "form__side":"",
                               "type" : "Input",
+                              "form__type":"input",
                               "value" : "testid",
                               "size":"w-100",
                               "formHint"  : "사방넷에 로그인하는 아이디입니다."
@@ -717,6 +795,7 @@
                                 "indicator" : true ,
                                 "formWrap__classname":"w-100 d-flex align-items-center",
                                 "type" : "Input",
+                                "form__type":"input",
                                 "value" : "fssdev01",
                                 "size":"flex-grow-1",
                                 "formHint"  : ""
@@ -736,6 +815,7 @@
                                 "formWrap__classname":"w-100 d-flex align-items-center",
                                 "form__side":"인증",
                                 "type" : "Input",
+                                "form__type":"input",
                                 "value" : "EBXJBNPMW5EuY66G2X99M6YdKJN28EM0",
                                 "size":"flex-grow-1",
                                 "formHint"  : "사방넷 고객센터(1599-1311)로 전화하여 API 연동 Key를 발급받으실 수 있습니다. 사방넷에서 요금 정산 후 API 연동 Key를 메일로 발송해 드립니다."
@@ -794,6 +874,7 @@
                               "indicator" : true ,
                               "formWrap__classname":"flex-grow-1 w-100",
                               "type" : "Input",
+                              "form__type":"input",
                               "value":"사방넷의 ‘주문확인’ 상태의 주문을 수집",
                               "size" : "w-100 border-none p-0",
                               "formHint":"사방넷 D주문관리 >【11】주문서확인처리에서 주문을 체크하고 '주문상태변경'버튼을 눌러 주문상태를 '주문확인’으로 변경한 주문입니다."
@@ -867,6 +948,35 @@
                                 "formHint__classname":""
                               }
                         ]
+                    }
+                ],
+                "nots" : [
+                    {
+                        "id":1,
+                        "name":"송하",
+                        "phone":"010-9978-7769",
+                        "number":"상품주문 20200823123344",
+                        "state":"송장등록",
+                        "reason":"주문서의 주소가 유효하지 않음"  ,
+                        "date":"2020.06.10 16:00"   
+                    },
+                    {
+                        "id":2,
+                        "name":"하덕연",
+                        "phone":"010-9978-7769",
+                        "number":"상품주문 20200823123344",
+                        "state":"송장등록",
+                        "reason":"주문서의 주소가 유효하지 않음"  ,
+                        "date":"2020.06.10 16:00"   
+                    },
+                    {
+                        "id":3,
+                        "name":"김다윤",
+                        "phone":"010-9978-7769",
+                        "number":"상품주문 20200823123344",
+                        "state":"송장등록",
+                        "reason":"주문서의 주소가 유효하지 않음"  ,
+                        "date":"2020.06.10 16:00"   
                     }
                 ]
             }]

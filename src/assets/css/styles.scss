@@ -3,22 +3,24 @@
 @import url('./all.css');
 @import url('./bootstrap.min.css');
 @import url('./App.css');
+@import url('./../icomoon/style.css');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+html,body{
+}
 html{
     font-size: 10px;
-    overflow-x: hidden;
+    
 }
 body{
     font-size: 1.6rem !important;
-    font-family: 'Poppins', 'Noto Sans KR', sans-serif;
+    font-family: 'Roboto', 'Noto Sans KR', sans-serif;
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: -0.5px;
     text-rendering: optimizeLegibility;
     color: $ink;
     margin: 0;
-    overflow-x: hidden;
-
 }
 label {
     margin-bottom: 0 !important;}
@@ -28,13 +30,24 @@ label {
 .form-control{
     width: auto;
 }
-::selection { 
-    background: $brand-blue;
-    color: #fff;
-}
+// ::selection { 
+//     background: $brand-blue;
+//     color: #fff;
+// }
 
 .font-num{
     font-family: 'Roboto',sans-serif;
+}
+//디바이더
+.circle{
+    display: inline-block;
+    background-color: $border;
+    margin-left: 4px;
+    margin-right: 4px;
+    &-3{
+        width: 3px;
+        height: 3px;
+    }
 }
 .line{
     &-10{
@@ -141,12 +154,6 @@ label {
 .font{
     @include fontSize() 
 }
-.letter-spacing--3{
-    letter-spacing: -3px;
-}
-.letter-spacing--2{
-    letter-spacing: -2px;
-}
 // 텍스트
 @mixin textStyle() {
     &-center{
@@ -194,10 +201,7 @@ label {
 
 .text{
     &-black{
-        color: #000;
-    }
-    &-ink{
-        color: $ink;
+        color: $black;
     }
     &-darker{
         color: $darker;
@@ -208,16 +212,14 @@ label {
     &-muted{
         color: $muted;
     }
-    &-mutedLight{
-        color: $mutedLight;
-    }
+    &-zone{
+        color: $zone;
+    }      
     &-critical{
         color: $critical;
     }
     &-ink{
-        &-ink{
-            color: $ink-ink;
-        }
+        color: $ink;
         &-darker{
             color: $ink-darker;
         }
@@ -229,9 +231,6 @@ label {
         }
         &-muted{
             color: $ink-muted;
-        }
-        &-zone{
-            color: $ink-zone;
         }
     }
 }
@@ -261,9 +260,10 @@ label {
     &-dark{
 		background-color: $dark !important;
     }
-    &-lighter-hover{
+    &-hover-lighter{
         &:hover{
-            background-color: transparentize($ink, .95);  
+            background-color: transparentize($ink, .97);  
+            cursor: pointer;
         }
     } 
 
@@ -386,6 +386,10 @@ label {
 
 .gx6-x {
 --bs-gutter-x: 6rem !important;
+}
+//커서
+.cusor-pointer{
+    cursor: pointer;
 }
 // 간격
 @mixin marginStyle($value) {
@@ -647,9 +651,6 @@ label {
 }
 .p{
     @include paddingHandle()
-}
-.cusor-pointer{
-    cursor: pointer;
 }
 @mixin commonStyle() {
     &-font{

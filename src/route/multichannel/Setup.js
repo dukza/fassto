@@ -12,34 +12,26 @@ import { LayoutContext } from "./../../hooks/context";
 
 
 const Setup = ({match,history}) => {
-    // const {shop} = useParams();
-    // console.log('match',{match})
     const { shops } = useContext(LayoutContext);
-
-    console.log('useParams',useParams())
-    
-
-    // const shop = menus.find(menu => menu.url === match.params.shop);    
     const shop = shops.find(shop => shop.url === match.params.shop);    
-
     return(
         <>
             <div className="navigation bg-light">
-                <a className="btnNav btnNav__r" onClick={() => history.goBack()}><i class="fal fa-times"></i></a><span>{shop.name}</span>  
+                <a className="btnNav btnNav__r" onClick={() => history.goBack()}><i className="fal fa-times"></i></a><span>{shop.name}</span>  
             </div>
             <div className="content">
-                {shop.components && 
+                {
                 shop.components.map((component)=>{
                 return(
-                    <>
                     <div key={component.id} className={`sectionType ${component.classname}`}>
                     {component.label && <div className="section--title">{component.label}</div>}
                     {component.contents && component.contents.map((content)=>{
                     const Type = content.type;
+                    console.log(content.id)
                     return(
                         <>
                         {Type ==='Switch' && <Switch
-                        key={content.id}
+                        id={content.id}
                         item__classname={content.item__classname}
                         formLabel={content.label}
                         formLabel__classname={content.formLabel__classname}
@@ -50,7 +42,7 @@ const Setup = ({match,history}) => {
                         checked={content.checked}
                         />}  
                         {Type ==='Input' && <Input
-                        key={content.id}
+                        id={content.id}
                         type={content.form__type}
                         label__classname={content.label__classname}
                         item__classname={content.item__classname}
@@ -66,7 +58,7 @@ const Setup = ({match,history}) => {
                         state=""
                         />}  
                         {Type ==='Select' &&  <Select
-                        key={content.id}
+                        id={content.id}
                         item__classname={content.item__classname}
                         formLabel={content.label}
                         formLabel__classname={content.formLabel__classname}
@@ -81,7 +73,7 @@ const Setup = ({match,history}) => {
                             ))}
                         </Select>}  
                         {Type ==='Button' && <Button
-                        key={content.id}
+                        indicator__classname={content.id}
                         tag="button"
                         state={content.state}
                         size={content.size}
@@ -94,12 +86,12 @@ const Setup = ({match,history}) => {
                         >
                         {content.children}{content.icon&& content.icon === "calendar" && <i className="far fa-calendar-check"></i>}
                         </Button>}
+                       
                         </>                  
                     )
                     
-                    })}    
+                    })}  
                     </div>
-                    </>
                 )})
                 }                
             </div>

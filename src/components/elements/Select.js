@@ -6,6 +6,7 @@ import FormLabel from "./FormLabel";
 import FormHint from "./FormHint";
 
 const Select = ({
+  id,
   item__classname,
   formLabel,
   formLabel__classname,
@@ -23,7 +24,7 @@ const Select = ({
 
   return (
     <>
-      <div className={`d-flex justify-content-between align-items-center ${item__classname && item__classname}`}>
+      <div key={id} className={`d-flex justify-content-between align-items-center ${item__classname && item__classname}`}>
         {formLabel && (
           <FormLabel
             formLabel={formLabel}

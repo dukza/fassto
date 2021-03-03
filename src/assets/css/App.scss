@@ -1,19 +1,81 @@
 
+@import './short.scss';
+// 브랜드
+$brand-greenLight:#F1F9F6;
+$brand-green:#00855B;
+// 배경
+#root{
+  overflow-x: hidden;
+}
+.bg{
+  &-brand-greenLight{
+    background-color: $brand-greenLight;
+  }
+}
 .App {
-  max-width: 375px;
   margin: 0 auto;
+  overflow-x: hidden;
+}
+.btn-circle{
+  display: flex;
+  flex-direction: column;    
+  justify-content: center;
+  margin-right: 0.8rem;
+  .icon{
+    text-align: center;
+    background-color: #fff;
+    border-radius: 50rem;
+    margin: 3px;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;    
+    .icon--icon{
+     font-size: 48px; 
+    }
+
+  }
+  .icon--text{
+    text-align: center;
+    color: $ink-body;
+    font-size: 1.2rem;
+    margin-top: 0.8rem;
+  }  
+}
+.list{
+  color: $ink-dark;
+  font-size: 1.5rem;
+  padding: 1.6rem;
+  .heading{
+    font-weight: $font-weight-bolder;
+    color: $ink;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+  }
+  .state{
+    color: $ink-darker;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  .date{
+    color: $muted;
+    font-size: 1.2rem;
+  }
+  .badge{
+    padding: .2em .45em;
+  }  
 }
 
-.badge{
-  padding: .2em .45em;
-}
 .indicator {
   padding-left: 0.4rem;
   padding-right: 0.4rem;
   position: relative;
   &::after{
     content: '';
-    background-color: #E15850;
+    background-color: $critical;
     border-radius: 50rem;
     width: 0.4rem;
     height: 0.4rem;
@@ -26,7 +88,7 @@
 .formLabel {
   text-decoration: none;
   text-align: left;
-  color: #202223;
+  color: $ink-dark;
   font-size: 1.5rem;
   font-weight: 500;
   padding-top: 0.4rem;
@@ -37,11 +99,11 @@
   min-width: 164px;
 }
 .formLabel-multichannel-not{
-  min-width: 72px;
+  min-width: 64px;
 }
 .form-check-input:checked {
-  background-color: #0d6efd;
-  border-color: #0d6efd;
+  background-color: $brand-green;
+  border-color: $brand-green;
 }
 
 .formHint {
@@ -53,15 +115,12 @@
   margin-top: 0em !important;
 }
 .sectionType{
-  padding-top: 1.6rem;
-  padding-bottom: 1.6rem;
-  padding-left: 2.4rem;
-  padding-right: 2.4rem;
+  padding: 1.6rem;
   border-bottom: 1px solid #F0F0F0;
 
 }
 .section--title{
-  font-weight: bold;
+  font-weight: $font-weight-med;
   color: #8C9196;
   font-size: 1.3rem;
   padding-bottom: 0.8rem;
@@ -69,7 +128,7 @@
 .navigation{
   box-sizing: border-box;
   text-align: center;
-  font-weight: bold;
+  font-weight: $font-weight-med;
   color: #222323;
   font-size: 1.6rem;
   position: relative;

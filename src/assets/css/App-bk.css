@@ -1,0 +1,149 @@
+.App {
+  max-width: 375px;
+  margin: 0 auto;
+}
+
+.state {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.date {
+  color: #A9AeB2;
+}
+
+.badge {
+  padding: .2em .45em;
+}
+
+.indicator {
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  position: relative;
+}
+
+.indicator::after {
+  content: '';
+  background-color: #E15850;
+  border-radius: 50rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  position: absolute;
+  top: 0.4rem;
+  display: inline-block;
+  z-index: 1;
+}
+
+.formLabel {
+  text-decoration: none;
+  text-align: left;
+  color: #202223;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  display: inline-block;
+}
+
+.formLabel-multichannel {
+  min-width: 164px;
+}
+
+.formLabel-multichannel-not {
+  min-width: 72px;
+}
+
+.form-check-input:checked {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.formHint {
+  color: #A9AeB2;
+}
+
+.form-check-input {
+  height: 1.6rem !important;
+  width: 3.2rem !important;
+  margin-top: 0em !important;
+}
+
+.sectionType {
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+  border-bottom: 1px solid #F0F0F0;
+}
+
+.section--title {
+  font-weight: bold;
+  color: #8C9196;
+  font-size: 1.3rem;
+  padding-bottom: 0.8rem;
+}
+
+.navigation {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  font-weight: bold;
+  color: #222323;
+  font-size: 1.6rem;
+  position: relative;
+  width: 100%;
+  height: 5.6rem;
+  position: fixed;
+  z-index: 2;
+  top: 0px;
+  left: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.filterBar {
+  text-align: center;
+  line-height: 56px;
+  height: 56px;
+  line-height: 56px;
+}
+
+.content {
+  padding-top: 56px;
+  padding-bottom: 92px;
+}
+
+.btnNav {
+  border-radius: 0.4rem;
+  text-align: center;
+  font-size: 2.4rem;
+  margin: 0 1.6rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  line-height: 3.2rem;
+  color: #222323;
+  display: inline-block;
+  position: absolute;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.btnNav:hover {
+  background-color: #F0F0F0;
+  color: #222323;
+}
+
+.btnNav__l {
+  left: 0;
+}
+
+.btnNav__r {
+  right: 0;
+}

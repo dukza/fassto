@@ -1,0 +1,73 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?oyk2qz');
+  src:  url('fonts/icomoon.eot?oyk2qz#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?oyk2qz') format('truetype'),
+    url('fonts/icomoon.woff?oyk2qz') format('woff'),
+    url('fonts/icomoon.svg?oyk2qz#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-shoplinker .path1:before {
+  content: "\e903";
+  color: rgb(246, 139, 31);
+}
+.icon-shoplinker .path2:before {
+  content: "\e904";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-shoplinker .path3:before {
+  content: "\e905";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-shoplinker .path4:before {
+  content: "\e906";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-shoplinker .path5:before {
+  content: "\e907";
+  margin-left: -1em;
+  color: rgb(246, 139, 31);
+}
+.icon-shoplinker .path6:before {
+  content: "\e908";
+  margin-left: -1em;
+  color: rgb(246, 139, 31);
+}
+.icon-shoplinker .path7:before {
+  content: "\e909";
+  margin-left: -1em;
+  color: rgb(246, 139, 31);
+}
+.icon-godo:before {
+  content: "\e900";
+  color: #fa2828;
+}
+.icon-smartstore:before {
+  content: "\e901";
+  color: #01c73c;
+}
+.icon-sabangnet:before {
+  content: "\e902";
+  color: #0075df;
+}

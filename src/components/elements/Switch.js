@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import classNames from "classnames";
 
 //component
@@ -6,6 +6,7 @@ import FormLabel from "./FormLabel";
 import FormHint from "./FormHint";
 
 const Switch = ({
+  id,
   item__classname,
   formLabel,
   formLabel__classname,
@@ -16,10 +17,14 @@ const Switch = ({
   formHint__classname,
   checked
 }) => {
+  const [isOn, setOn] = useState(checked)
   const classes = classNames("form-check form-switch");
+  const toggleOn =() => {
+    setOn(!isOn)
+  }
   return (
     <>
-      <div className={classNames(`d-flex justify-content-between align-items-center ${item__classname}`)}>
+      <div key={id} className={classNames(`d-flex justify-content-between align-items-center ${item__classname}`)}>
         {formLabel && (
           <FormLabel
             formLabel={formLabel}
@@ -33,7 +38,8 @@ const Switch = ({
             <input
               className="form-check-input"
               type="checkbox"
-              id="flexSwitchCheckChecked" checked={checked}
+              id="flexSwitchCheckChecked" checked={isOn}
+              onChange={toggleOn}
             />
           </div>
         </div>

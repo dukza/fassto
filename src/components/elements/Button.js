@@ -6,6 +6,7 @@ import FormLabel from "./FormLabel";
 import FormHint from "./FormHint";
 
 const Button = ({
+  id,
   tag,
   size,
   state,
@@ -26,7 +27,7 @@ const Button = ({
   const Component = tag;
   return (
     <>
-      <div className={`d-flex justify-content-between align-items-center ${item__classname}`}>
+      <div key={id} className={`d-flex justify-content-between align-items-center ${item__classname}`}>
         {formLabel && (
           <FormLabel
             formLabel={formLabel}

@@ -7,6 +7,7 @@ import FormHint from "./FormHint";
 import Button from "./Button";
 
 const Input = ({
+  id,
   type,
   item__classname,
   formLabel,
@@ -26,12 +27,10 @@ const Input = ({
     state && `border-${state}`,
     size && size
   );
-
   const Component = type === "textarea" ? "textarea" : "input";
-  console.log(type)
   return (
     <>
-      <div className={`d-flex justify-content-between align-items-center ${item__classname}`}>
+      <div key={id} className={`d-flex justify-content-between align-items-center ${item__classname}`}>
         {formLabel && (
           <FormLabel
             formLabel={formLabel}

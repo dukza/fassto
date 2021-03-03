@@ -2,22 +2,22 @@
 @import url("./all.css");
 @import url("./bootstrap.min.css");
 @import url("./App.css");
+@import url("./../icomoon/style.css");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 html {
   font-size: 10px;
-  overflow-x: hidden;
 }
 
 body {
   font-size: 1.6rem !important;
-  font-family: 'Poppins', 'Noto Sans KR', sans-serif;
+  font-family: 'Roboto', 'Noto Sans KR', sans-serif;
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: -0.5px;
   text-rendering: optimizeLegibility;
-  color: #1a1a1a;
+  color: #222323;
   margin: 0;
-  overflow-x: hidden;
 }
 
 label {
@@ -32,18 +32,20 @@ label {
   width: auto;
 }
 
-::-moz-selection {
-  background: #0a14c8;
-  color: #fff;
-}
-
-::selection {
-  background: #0a14c8;
-  color: #fff;
-}
-
 .font-num {
   font-family: 'Roboto',sans-serif;
+}
+
+.circle {
+  display: inline-block;
+  background-color: #E1E4E8;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.circle-3 {
+  width: 3px;
+  height: 3px;
 }
 
 .line-10 {
@@ -67,7 +69,7 @@ label {
 }
 
 .font-weight-light {
-  font-weight: 200 !important;
+  font-weight: 100 !important;
 }
 
 .font-weight-lighter {
@@ -170,14 +172,6 @@ label {
   font-size: 1.1rem;
 }
 
-.letter-spacing--3 {
-  letter-spacing: -3px;
-}
-
-.letter-spacing--2 {
-  letter-spacing: -2px;
-}
-
 .text-center {
   text-align: center;
 }
@@ -229,12 +223,8 @@ label {
   color: #000;
 }
 
-.text-ink {
-  color: #1a1a1a;
-}
-
 .text-darker {
-  color: #161616;
+  color: #333333;
 }
 
 .text-body {
@@ -242,39 +232,35 @@ label {
 }
 
 .text-muted {
-  color: #A9AeB2;
+  color: #A9AEB2;
 }
 
-.text-mutedLight {
-  color: #BBBBBB;
+.text-zone {
+  color: #E9ECEF;
 }
 
 .text-critical {
   color: #E15850;
 }
 
-.text-ink-ink {
+.text-ink {
   color: #222323;
 }
 
 .text-ink-darker {
-  color: #343943;
+  color: #202223;
 }
 
 .text-ink-dark {
-  color: #676C76;
+  color: #333D4B;
 }
 
 .text-ink-body {
-  color: #999EAA;
+  color: #5F6877;
 }
 
 .text-ink-muted {
-  color: #ABB4BD;
-}
-
-.text-ink-zone {
-  color: #E9E9E9;
+  color: #999EAA;
 }
 
 .h-100 {
@@ -290,19 +276,20 @@ label {
 }
 
 .bg-ink {
-  background-color: #1a1a1a !important;
+  background-color: #222323 !important;
 }
 
 .bg-darker {
-  background-color: #161616 !important;
+  background-color: #333333 !important;
 }
 
 .bg-dark {
-  background-color: #262626 !important;
+  background-color: #5C5F62 !important;
 }
 
-.bg-lighter-hover:hover {
-  background-color: rgba(26, 26, 26, 0.05);
+.bg-hover-lighter:hover {
+  background-color: rgba(34, 35, 35, 0.03);
+  cursor: pointer;
 }
 
 .btn-plain {
@@ -423,6 +410,10 @@ label {
 
 .gx6-x {
   --bs-gutter-x: 6rem !important;
+}
+
+.cusor-pointer {
+  cursor: pointer;
 }
 
 .m0 {
@@ -2056,10 +2047,6 @@ label {
 .p240-x {
   padding-left: 24rem !important;
   padding-right: 24rem !important;
-}
-
-.cusor-pointer {
-  cursor: pointer;
 }
 
 @media (max-width: 576px) {
