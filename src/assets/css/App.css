@@ -25,11 +25,14 @@
   margin-right: 0.8rem;
 }
 
+.btn-circle.active .icon {
+  border: 3px solid #00855B;
+}
+
 .btn-circle .icon {
   text-align: center;
   background-color: #fff;
   border-radius: 50rem;
-  margin: 3px;
   width: 64px;
   height: 64px;
   display: -webkit-box;
