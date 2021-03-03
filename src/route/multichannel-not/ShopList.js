@@ -2,10 +2,9 @@ import React,{useContext} from 'react';
 import {
     useParams
   } from "react-router-dom";
-import Input from "../../components/elements/Input";
-import Select from "../../components/elements/Select";
-import Switch from "../../components/elements/Switch";
-import Button from "../../components/elements/Button";
+
+//components
+import ShopListCell from "./../../components/ShopListCell";
 
 //context
 import { LayoutContext } from "../../hooks/context";
@@ -23,15 +22,14 @@ const ShopList = ({match,history}) => {
             {shops[0].nots.map((not)=>{
                return(
                    <>
-                    <div className="d-flex justify-content-between">
-                        <div>
-                          {not.name}{not.phone}  
-                        </div>
-                        <div>{not.state}</div>
-                    </div>
-                    <div>{not.number}</div>
-                    <div>{not.reason}</div>
-                    <div>{not.date}</div>
+                    <ShopListCell 
+                    name={not.name}
+                    phone={not.phone}
+                    state={not.state}
+                    number={not.number}
+                    reason={not.reason}
+                    date={not.date}
+                    />
                    </>
                ) 
             }  
