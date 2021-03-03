@@ -1,9 +1,93 @@
-.App {
-  max-width: 375px;
-  margin: 0 auto;
+#root {
+  overflow-x: hidden;
 }
 
-.badge {
+.bg-brand-greenLight {
+  background-color: #F1F9F6;
+}
+
+.App {
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+.btn-circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 0.8rem;
+}
+
+.btn-circle .icon {
+  text-align: center;
+  background-color: #fff;
+  border-radius: 50rem;
+  margin: 3px;
+  width: 64px;
+  height: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.btn-circle .icon .icon--icon {
+  font-size: 48px;
+}
+
+.btn-circle .icon--text {
+  text-align: center;
+  color: #5F6877;
+  font-size: 1.2rem;
+  margin-top: 0.8rem;
+}
+
+.list {
+  color: #333D4B;
+  font-size: 1.5rem;
+  padding: 1.6rem;
+}
+
+.list .heading {
+  font-weight: 700;
+  color: #222323;
+  font-size: 1.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.list .state {
+  color: #202223;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.list .date {
+  color: #A9AEB2;
+  font-size: 1.2rem;
+}
+
+.list .badge {
   padding: .2em .45em;
 }
 
@@ -28,7 +112,7 @@
 .formLabel {
   text-decoration: none;
   text-align: left;
-  color: #202223;
+  color: #333D4B;
   font-size: 1.5rem;
   font-weight: 500;
   padding-top: 0.4rem;
@@ -41,12 +125,12 @@
 }
 
 .formLabel-multichannel-not {
-  min-width: 72px;
+  min-width: 64px;
 }
 
 .form-check-input:checked {
-  background-color: #0d6efd;
-  border-color: #0d6efd;
+  background-color: #00855B;
+  border-color: #00855B;
 }
 
 .formHint {
@@ -60,15 +144,12 @@
 }
 
 .sectionType {
-  padding-top: 1.6rem;
-  padding-bottom: 1.6rem;
-  padding-left: 2.4rem;
-  padding-right: 2.4rem;
+  padding: 1.6rem;
   border-bottom: 1px solid #F0F0F0;
 }
 
 .section--title {
-  font-weight: bold;
+  font-weight: 500;
   color: #8C9196;
   font-size: 1.3rem;
   padding-bottom: 0.8rem;
@@ -78,7 +159,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   text-align: center;
-  font-weight: bold;
+  font-weight: 500;
   color: #222323;
   font-size: 1.6rem;
   position: relative;
