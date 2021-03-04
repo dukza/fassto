@@ -11,7 +11,7 @@ export default function ShopListCell({id,name,phone,state,number,reason,date}){
             </div>
             <div>{reason}</div>
             <div className="font-13 text-ink-muted">{number}</div>
-            <div className="date">{date}</div>            
+            <div className="date text-border">{date}</div>            
         </div>
         </>
     )

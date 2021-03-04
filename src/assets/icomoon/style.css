@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?h2vecs');
-  src:  url('fonts/icomoon.eot?h2vecs#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?h2vecs') format('truetype'),
-    url('fonts/icomoon.woff?h2vecs') format('woff'),
-    url('fonts/icomoon.svg?h2vecs#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?w5eizd');
+  src:  url('fonts/icomoon.eot?w5eizd#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?w5eizd') format('truetype'),
+    url('fonts/icomoon.woff?w5eizd') format('woff'),
+    url('fonts/icomoon.svg?w5eizd#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-smartstore:before {
+  content: "\e905";
+  color: #01c73c;
+}
 .icon-shoplinker .path1:before {
   content: "\e900";
   color: rgb(246, 139, 31);
@@ -47,10 +51,6 @@
 .icon-godo:before {
   content: "\e904";
   color: #fa2828;
-}
-.icon-smartstore:before {
-  content: "\e905";
-  color: #01c73c;
 }
 .icon-sabangnet:before {
   content: "\e906";

@@ -27,7 +27,7 @@
 }
 
 .btn-circle.active .btn-circle--icon {
-  border: 4px solid #6add85;
+  border: 4px solid #00855B;
 }
 
 .btn-circle .icon--text {
@@ -76,15 +76,20 @@
 }
 
 .btn-circle--icon .icon--icon::before {
-  color: #fff !important;
+  color: #fff;
 }
 
-.icon--icon span + ::before {
+.icon--icon span + span::before {
+  color: #fff;
+}
+
+.icon-shoplinker span:before {
   color: #fff !important;
 }
 
 .btn-circle--all {
-  background-color: #00855B;
+  color: #00855B !important;
+  background-color: #fff;
 }
 
 .btn-circle--smartstore {

@@ -27,7 +27,7 @@ $brand-greenNeonDarkLight:#6add85;
   cursor: pointer;
   &.active{
     .btn-circle--icon{
-      border: 4px solid $brand-greenNeonDarkLight;
+      border: 4px solid $brand-green;
     }
     
   }
@@ -62,15 +62,19 @@ $brand-greenNeonDarkLight:#6add85;
   flex-direction: column;    
   .icon--icon{
     &::before{ 
-     color: #fff !important; 
+     color: #fff ; 
     }
   }
 }
-.icon--icon span + ::before{
+.icon--icon span + span::before{
+  color: #fff ; 
+}
+.icon-shoplinker span:before{
   color: #fff !important; 
 }
 .btn-circle--all{
-  background-color: $brand-green;
+  color: $brand-green !important;
+  background-color: #fff;
 }
 .btn-circle--smartstore{
   background-color: #1abe41;

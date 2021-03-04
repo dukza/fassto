@@ -27,7 +27,7 @@ const Intro = ({match,history}) => {
                             <IndexLink key={shop.id} className="text-decoration-none bg-hover-lighter d-flex align-items-center justify-content-between sectionType" to={`${match.url}/${shop.url}`} key={`/multichannel/${shop.id}`}>
                                 <div className="d-flex align-items-center">
                                     <ShopLogo url={shop.url}/>
-                                    <div className="d-flex flex-column">
+                                    <div className="d-flex flex-column m12-l">
                                         <div>
                                             {shop.state ? <span className="badge badge-info rounded-pill d-inline font-11">사용중</span>:<span className="badge badge-default rounded-pill d-inline font-11">미사용</span>}
                                             
