@@ -53,7 +53,7 @@
                                 "indicator" : true ,
                                 "type" : "Switch",
                                 "checked" : true,
-                                "status": "disabled"
+                                "disabled": true
                             }
                         ],
                         "formHint"  : ""
@@ -75,7 +75,7 @@
                               "value" : "ncp_1abc0d_01",
                               "size":"w-100",
                               "formHint"  : "",
-                              "status": "disabled"
+                              "disabled": true
                             }
                         ]
                     }, 
@@ -98,7 +98,7 @@
                               "formLabel__classname":"formLabel-multichannel",
                               "value" : "YYYY년 MM월 DD일",
                               "formHint"  : "",
-                              "status": "disabled"
+                              "disabled": true
 
                             }
                         ]
@@ -119,7 +119,7 @@
                               "size" : "w-100",
                               "value" : "평일 2시간마다 자동수집(8:00~20:00에 동작)",
                               "formHint"  : "",
-                              "status": "disabled"
+                              "disabled": true
                             }
                         ]
                     },
@@ -138,7 +138,7 @@
                               "type" : "Input",
                               "size" : "w-100",
                               "value" : "결제완료",
-                              "status": "disabled"
+                              "disabled": true
                             },
                             { "id": 1,
                                 "item__classname":"flex-row p8-t",
@@ -151,7 +151,7 @@
                                 "value" : "결제 10분후 주문건",
                                 "formHint"  : "구매고객이 구매취소할 수 있는 시간적 여유를 10분 이상 주는 것을 권장합니다. FMS>출고관리>택배신청에 주문이 자동 수집되면 주문이 발주확인 처리되므로, 구매고객이 취소요청했을 경우 판매자가 취소승인처리를 하여야 합니다.",
                                 "formHint__classname":"",
-                                "status": "disabled"
+                                "disabled": true
                               }
                         ]
 
@@ -172,7 +172,7 @@
                               "size" : "w-100",
                               "value" : "영업일 6일 전 주문",
                               "formHint"  : "이미 자동 수집된 주문은 중복 등록되지 않습니다.",
-                              "status": "disabled"
+                              "disabled": true
                             }
                         ]
                     },
@@ -190,7 +190,7 @@
                                 "type" : "Switch",
                                 "checked" : true,
                                 "formHint"  : "하나의 주문서에 일부 상품만 재고가 있고 나머지 상품은 재고가 없을 경우 재고가 있는 상품만 우선 택배신청 등록됩니다.",
-                                "status": "disabled"
+                                "disabled": true
                             }
                         ]
                         
@@ -209,7 +209,7 @@
                                 "type" : "Switch",
                                 "checked" : true,
                                 "formHint"  : "쇼핑몰에 송장번호를 자동으로 등록합니다.자동등록을 사용하실 경우, 매일 30분마다 쇼핑몰에 송장번호가 자동 등록됩니다. 송장번호가 등록되면 주문상태는 ‘발송처리’ 상태로 변경됩니다. 스마트스토어의 판매관리>배송현황 관리에서 확인하실 수 있습니다.",
-                                "status": "disabled"
+                                "disabled": true
                             }
                         ]
                         
@@ -229,7 +229,7 @@
                               "type" : "Input",
                               "size" : "w-100",
                               "value" : "고객사의 이름 (예: {(주)제제Lab})",
-                              "status": "disabled"
+                              "disabled": true
                             },
                             { "id": 1,
                                 "item__classname":"flex-column p8-t",
@@ -242,7 +242,7 @@
                                 "value" : "고객사의 연락처: {02-1234-1234}",
                                 "formHint"  : "",
                                 "formHint__classname":"",
-                                "status": "disabled"
+                                "disabled": true
                               }
                         ]
                     },
@@ -263,7 +263,7 @@
                               "value" : "https://smartstore.naver.com/shopshopshop",
                               "size":"w-100 font-12",
                               "formHint"  : "",
-                              "status": "disabled"
+                              "disabled": true
                             }
                         ]
                     }

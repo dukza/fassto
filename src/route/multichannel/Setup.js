@@ -39,7 +39,7 @@ const Setup = ({match,history}) => {
                         formHint={content.formHint}
                         formHint__classname={content.formHint__classname}
                         checked={content.checked}
-                        status={content.status}
+                        disabled={content.disabled}
                         />}  
                         {Type ==='Input' && <Input
                         id={content.id}
@@ -56,7 +56,7 @@ const Setup = ({match,history}) => {
                         value={content.value}
                         size={content.size}
                         state=""
-                        status={content.status}
+                        disabled={content.disabled}
                         />}  
                         {Type ==='Select' &&  <Select
                         id={content.id}
@@ -85,7 +85,7 @@ const Setup = ({match,history}) => {
                         indicator
                         formHint={content.formHint}
                         formHint__classname={content.formHint__classname}
-                        status={content.status}
+                        disabled={content.disabled}
                         >
                         {content.children}{content.icon&& content.icon === "calendar" && <i className="far fa-calendar-check"></i>}
                         </Button>}
