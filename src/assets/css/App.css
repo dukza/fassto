@@ -22,19 +22,44 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-right: 0.8rem;
+  margin-right: 1.6rem;
+  cursor: pointer;
 }
 
-.btn-circle.active .icon {
-  border: 3px solid #00855B;
+.btn-circle.active .btn-circle--icon {
+  border: 4px solid #6add85;
 }
 
-.btn-circle .icon {
+.btn-circle .icon--text {
   text-align: center;
-  background-color: #fff;
-  border-radius: 50rem;
+  color: #5F6877;
+  font-size: 1.2rem;
+  margin-top: 0.8rem;
+}
+
+#multichannel .btn-circle--icon {
+  width: 36px;
+  height: 36px;
+}
+
+#multichannel .btn-circle--icon .icon--icon {
+  font-size: 24px;
+}
+
+#multichannel--not .btn-circle--icon {
   width: 64px;
   height: 64px;
+}
+
+#multichannel--not .btn-circle--icon .icon--icon {
+  font-size: 40px;
+}
+
+.btn-circle--icon {
+  text-align: center;
+  -webkit-box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+  border-radius: 50rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -50,19 +75,36 @@
           flex-direction: column;
 }
 
-.btn-circle .icon .icon--icon {
-  font-size: 48px;
+.btn-circle--icon .icon--icon::before {
+  color: #fff !important;
 }
 
-.btn-circle .icon--text {
-  text-align: center;
-  color: #5F6877;
-  font-size: 1.2rem;
-  margin-top: 0.8rem;
+.icon--icon span + ::before {
+  color: #fff !important;
+}
+
+.btn-circle--all {
+  background-color: #00855B;
+}
+
+.btn-circle--smartstore {
+  background-color: #1abe41;
+}
+
+.btn-circle--godo {
+  background-color: #f73338;
+}
+
+.btn-circle--sabangnet {
+  background-color: #006dd6;
+}
+
+.btn-circle--shoplinker {
+  background-color: #f37e2b;
 }
 
 .list {
-  color: #333D4B;
+  color: #5F6877;
   font-size: 1.5rem;
   padding: 1.6rem;
 }
@@ -80,7 +122,7 @@
 }
 
 .list .state {
-  color: #202223;
+  color: #333D4B;
   font-size: 1.2rem;
   font-weight: 500;
 }
@@ -149,6 +191,10 @@
 .sectionType {
   padding: 1.6rem;
   border-bottom: 1px solid #F0F0F0;
+}
+
+.sectionType:last-child {
+  border-bottom: none;
 }
 
 .section--title {

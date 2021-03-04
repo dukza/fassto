@@ -17,7 +17,8 @@ const Button = ({
   indicator__classname,
   children,
   formHint,
-  formHint__classname
+  formHint__classname,
+  status
 }) => {
   const classes = classNames(
     "btn", "border",
@@ -36,7 +37,7 @@ const Button = ({
             indicator__classname={indicator && indicator__classname}
           />
         )}
-        <Component className={classes}>{children}</Component>
+        <Component className={classes} disabled={status}>{children}</Component>
       </div>
       {formHint && (
         <FormHint formHint__classname={formHint__classname}>

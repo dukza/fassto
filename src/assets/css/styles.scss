@@ -6,11 +6,9 @@
 @import url('./../icomoon/style.css');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-html,body{
-}
+
 html{
     font-size: 10px;
-    
 }
 body{
     font-size: 1.6rem !important;
@@ -216,7 +214,7 @@ label {
         color: $zone;
     }      
     &-critical{
-        color: $critical;
+        color: $base-critical;
     }
     &-ink{
         color: $ink;
@@ -232,6 +230,10 @@ label {
         &-muted{
             color: $ink-muted;
         }
+        &-form{
+            color: $ink-form;
+        }
+        
     }
 }
 // 사이즈
@@ -277,6 +279,15 @@ label {
     &:hover{
         background-color: $lighter;
     }
+}
+// 뱃지
+.badge-info{
+    background-color: $info !important;
+    color: $base-info !important;
+}
+.badge-default{
+    background-color: $lighter !important;
+    color: $ink-body !important;   
 }
 // 보더
 .border{

@@ -16,7 +16,7 @@ const Setup = ({match,history}) => {
     const shop = shops.find(shop => shop.url === match.params.shop);    
     return(
         <>
-            <div className="navigation bg-light">
+            <div className="navigation bg-white">
                 <a className="btnNav btnNav__r" onClick={() => history.goBack()}><i className="fal fa-times"></i></a><span>{shop.name}</span>  
             </div>
             <div className="content">
@@ -27,7 +27,6 @@ const Setup = ({match,history}) => {
                     {component.label && <div className="section--title">{component.label}</div>}
                     {component.contents && component.contents.map((content)=>{
                     const Type = content.type;
-                    console.log(content.id)
                     return(
                         <>
                         {Type ==='Switch' && <Switch
@@ -40,6 +39,7 @@ const Setup = ({match,history}) => {
                         formHint={content.formHint}
                         formHint__classname={content.formHint__classname}
                         checked={content.checked}
+                        status={content.status}
                         />}  
                         {Type ==='Input' && <Input
                         id={content.id}
@@ -56,6 +56,7 @@ const Setup = ({match,history}) => {
                         value={content.value}
                         size={content.size}
                         state=""
+                        status={content.status}
                         />}  
                         {Type ==='Select' &&  <Select
                         id={content.id}
@@ -73,6 +74,7 @@ const Setup = ({match,history}) => {
                             ))}
                         </Select>}  
                         {Type ==='Button' && <Button
+                        id={content.id}
                         indicator__classname={content.id}
                         tag="button"
                         state={content.state}
@@ -83,6 +85,7 @@ const Setup = ({match,history}) => {
                         indicator
                         formHint={content.formHint}
                         formHint__classname={content.formHint__classname}
+                        status={content.status}
                         >
                         {content.children}{content.icon&& content.icon === "calendar" && <i className="far fa-calendar-check"></i>}
                         </Button>}

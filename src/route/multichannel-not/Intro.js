@@ -7,7 +7,7 @@ history
 import IndexLink from '../../components/IndexLink';
 import Select from './../../components/elements/Select';
 import ShopList from './ShopList';
-
+import ShopLogo from './../../components/ShopLogo';         
 
 //hooks
 import {useData} from "./../../hooks/useData";
@@ -35,7 +35,6 @@ const Intro = ({match,history}) => {
             <div className="content" >
                 <div style={{'overflowX':"hidden"}}>
                     <div className="d-flex flex-row justify-content-between align-items-center bg-brand-greenLight sectionType" style={{'overflowX':"auto"}}>
-
                         {shops.map((shop)=>{
                             const classes = classNames(
                                 "btn-circle",
@@ -44,9 +43,7 @@ const Intro = ({match,history}) => {
                             return(
                             <span key={shop.id} onClick={()=>toggleShop(shop.id)}>
                                 <div className={classes}>
-                                    <span className="icon">
-                                        {shop.url ==="shoplinker" ? <span className="icon--icon icon-shoplinker"><span className="path1"></span><span className="path2"></span><span className="path3"></span><span className="path4"></span><span className="path5"></span><span className="path6"></span><span className="path7"></span></span>:<span className={`icon--icon icon-${shop.url}`}></span>}
-                                    </span>
+                                    <ShopLogo url={shop.url}/>
                                     <div className="icon--text">{shop.name}</div>
                                 </div>
                             </span>

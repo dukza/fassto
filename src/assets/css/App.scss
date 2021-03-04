@@ -1,8 +1,11 @@
 
 @import './short.scss';
 // 브랜드
+$brand-greenDarkLight:#E1EBE6;
 $brand-greenLight:#F1F9F6;
 $brand-green:#00855B;
+$brand-greenNeonDarkLight:#6add85;
+
 // 배경
 #root{
   overflow-x: hidden;
@@ -20,27 +23,13 @@ $brand-green:#00855B;
   display: flex;
   flex-direction: column;    
   justify-content: center;
-  margin-right: 0.8rem;
+  margin-right: 1.6rem;
+  cursor: pointer;
   &.active{
-    .icon{
-      border:3px solid $brand-green;
+    .btn-circle--icon{
+      border: 4px solid $brand-greenNeonDarkLight;
     }
     
-  }
-  .icon{
-    text-align: center;
-    background-color: #fff;
-    border-radius: 50rem;
-    width: 64px;
-    height: 64px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;    
-    .icon--icon{
-     font-size: 48px; 
-    }
-
   }
   .icon--text{
     text-align: center;
@@ -49,9 +38,55 @@ $brand-green:#00855B;
     margin-top: 0.8rem;
   }  
 }
+#multichannel .btn-circle--icon{
+  width: 36px;
+  height: 36px;
+  .icon--icon{
+    font-size: 24px; 
+  }
+}
+#multichannel--not .btn-circle--icon{
+  width: 64px;
+  height: 64px;
+  .icon--icon{
+    font-size: 40px; 
+  }
+}
+.btn-circle--icon{
+  text-align: center;
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+  border-radius: 50rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;    
+  .icon--icon{
+    &::before{ 
+     color: #fff !important; 
+    }
+  }
+}
+.icon--icon span + ::before{
+  color: #fff !important; 
+}
+.btn-circle--all{
+  background-color: $brand-green;
+}
+.btn-circle--smartstore{
+  background-color: #1abe41;
+}
+.btn-circle--godo{
+  background-color: #f73338;
+}
+.btn-circle--sabangnet{
+  background-color: #006dd6;
+}
+.btn-circle--shoplinker{
+  background-color: #f37e2b;
+}
 
 .list{
-  color: $ink-dark;
+  color: $ink-body;
   font-size: 1.5rem;
   padding: 1.6rem;
   .heading{
@@ -62,7 +97,7 @@ $brand-green:#00855B;
     align-items: center;
   }
   .state{
-    color: $ink-darker;
+    color: $ink-dark;
     font-size: 1.2rem;
     font-weight: 500;
   }
@@ -81,7 +116,7 @@ $brand-green:#00855B;
   position: relative;
   &::after{
     content: '';
-    background-color: $critical;
+    background-color: $base-critical;
     border-radius: 50rem;
     width: 0.4rem;
     height: 0.4rem;
@@ -123,7 +158,9 @@ $brand-green:#00855B;
 .sectionType{
   padding: 1.6rem;
   border-bottom: 1px solid #F0F0F0;
-
+}
+.sectionType:last-child{
+  border-bottom: none;
 }
 .section--title{
   font-weight: $font-weight-med;

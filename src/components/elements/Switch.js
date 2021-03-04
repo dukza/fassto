@@ -15,7 +15,8 @@ const Switch = ({
   formWrap__classname,
   formHint,
   formHint__classname,
-  checked
+  checked,
+  status
 }) => {
   const [isOn, setOn] = useState(checked)
   const classes = classNames("form-check form-switch");
@@ -40,6 +41,7 @@ const Switch = ({
               type="checkbox"
               id="flexSwitchCheckChecked" checked={isOn}
               onChange={toggleOn}
+              disabled={status}  
             />
           </div>
         </div>

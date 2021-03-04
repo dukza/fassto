@@ -20,7 +20,8 @@ const Input = ({
   formHint__classname,
   value,
   size,
-  state
+  state,
+  status
 }) => {
   const classes = classNames(
     "form-control",
@@ -28,6 +29,7 @@ const Input = ({
     size && size
   );
   const Component = type === "textarea" ? "textarea" : "input";
+  console.log(status)
   return (
     <>
       <div key={id} className={`d-flex justify-content-between align-items-center ${item__classname}`}>
@@ -40,7 +42,7 @@ const Input = ({
           />
         )}
         <div className={formWrap__classname}>
-          <Component value={value} className={classes}></Component>
+          <Component value={value} className={classes} disabled={status}></Component>
           {form__side && <a className="btn btn-light m8-l">{form__side}</a>}
         </div>
       </div>
