@@ -32,9 +32,10 @@
 
 .btn-circle .icon--text {
   text-align: center;
-  color: #5F6877;
+  color: #8C96A2;
   font-size: 1.2rem;
   margin-top: 0.8rem;
+  white-space: pre;
 }
 
 #multichannel .btn-circle--icon {
@@ -83,6 +84,11 @@
   color: #fff;
 }
 
+.icon-all:before {
+  content: "\e90a";
+  color: #00855b !important;
+}
+
 .icon-shoplinker span:before {
   color: #fff !important;
 }
@@ -109,14 +115,14 @@
 }
 
 .list {
-  color: #5F6877;
+  color: #AEB7C2;
   font-size: 1.5rem;
   padding: 1.6rem;
 }
 
 .list .heading {
   font-weight: 700;
-  color: #222323;
+  color: #191E28;
   font-size: 1.3rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -127,18 +133,17 @@
 }
 
 .list .state {
-  color: #333D4B;
+  color: #AEB7C2;
   font-size: 1.2rem;
   font-weight: 500;
 }
 
-.list .date {
-  color: #A9AEB2;
-  font-size: 1.2rem;
-}
-
 .list .badge {
   padding: .2em .45em;
+}
+
+.list:last-child {
+  border-bottom: none;
 }
 
 .indicator {
@@ -162,7 +167,7 @@
 .formLabel {
   text-decoration: none;
   text-align: left;
-  color: #333D4B;
+  color: #4D5765;
   font-size: 1.5rem;
   font-weight: 500;
   padding-top: 0.4rem;
@@ -235,10 +240,15 @@
 }
 
 .filterBar {
-  text-align: center;
+  text-align: right;
   line-height: 56px;
   height: 56px;
   line-height: 56px;
+}
+
+.filterBar .filterBar--inner {
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .content {
@@ -249,7 +259,7 @@
 .btnNav {
   border-radius: 0.4rem;
   text-align: center;
-  font-size: 2.4rem;
+  font-size: 2rem;
   margin: 0 1.6rem;
   width: 3.2rem;
   height: 3.2rem;

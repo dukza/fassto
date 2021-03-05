@@ -14,9 +14,11 @@ import {useData} from "./../../hooks/useData";
 
 //context
 import { LayoutContext } from "../../hooks/context";
+import Modal from '../../components/elements/Modal';
 
 const Intro = ({match,history}) => {
     const {getData} = useData();
+    const [isModal, setMadal] = useState(false)
     const [isShop,setShop] = useState(0);
     const [isSelect,setSelect] = useState(0);
     const {nots} = getData(isShop);
@@ -25,8 +27,12 @@ const Intro = ({match,history}) => {
         setShop(id)
         setSelect(id)
     }
-    const shop = shops.find(shop => shop.url === match.params.shop);  
- 
+
+    const toggleModal = (e) => {
+        console.log('toggleModal')
+        e.preventDefault();
+        setMadal(!isModal)
+    }
     return(
         <>
             <div className="navigation bg-brand-greenLight">
@@ -51,8 +57,18 @@ const Intro = ({match,history}) => {
                     </div>
                     
                 </div>
-
+                <div className="filterBar">
+                    <div className="filterBar--inner">
+                        <a onClick={toggleModal} className="font-13 btn-plain">1주일 <span className="d-inline-block m2-x">·</span> 최신순 <i className="fal fa-chevron-down font-12 m2-l"></i></a>
+                    </div>
+                </div>
                 <ShopList nots={nots}></ShopList>
+                <Modal 
+                isModal={isModal}
+                toggleModal={toggleModal}
+                title="날짜 선택"
+                buttonName="적용"
+                state={isModal}>캘린더</Modal>
             </div>
         </>
     )

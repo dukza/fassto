@@ -36,6 +36,7 @@ $brand-greenNeonDarkLight:#6add85;
     color: $ink-body;
     font-size: 1.2rem;
     margin-top: 0.8rem;
+    white-space: pre;
   }  
 }
 #multichannel .btn-circle--icon{
@@ -69,6 +70,11 @@ $brand-greenNeonDarkLight:#6add85;
 .icon--icon span + span::before{
   color: #fff ; 
 }
+.icon-all:before {
+  content: "\e90a";
+  color: #00855b !important;
+}
+
 .icon-shoplinker span:before{
   color: #fff !important; 
 }
@@ -90,7 +96,7 @@ $brand-greenNeonDarkLight:#6add85;
 }
 
 .list{
-  color: $ink-body;
+  color: $ink-muted;
   font-size: 1.5rem;
   padding: 1.6rem;
   .heading{
@@ -101,17 +107,16 @@ $brand-greenNeonDarkLight:#6add85;
     align-items: center;
   }
   .state{
-    color: $ink-dark;
+    color: $ink-muted;
     font-size: 1.2rem;
     font-weight: 500;
   }
-  .date{
-    color: $muted;
-    font-size: 1.2rem;
-  }
   .badge{
     padding: .2em .45em;
-  }  
+  } 
+   &:last-child{
+     border-bottom: none;
+   }
 }
 
 .indicator {
@@ -190,10 +195,14 @@ $brand-greenNeonDarkLight:#6add85;
   justify-content: center;
 }
 .filterBar{
-  text-align: center;
+  text-align: right;
   line-height: 56px;
   height: 56px;
   line-height: 56px;
+  .filterBar--inner{
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 .content{
   padding-top: 56px;
@@ -202,7 +211,7 @@ $brand-greenNeonDarkLight:#6add85;
 .btnNav{
   border-radius: 0.4rem;
   text-align: center;
-  font-size: 2.4rem;
+  font-size: 2rem;
   margin: 0 1.6rem;
   width: 3.2rem;
   height: 3.2rem;

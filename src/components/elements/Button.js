@@ -18,12 +18,14 @@ const Button = ({
   children,
   formHint,
   formHint__classname,
-  status
+  status,
+  classAdd
 }) => {
   const classes = classNames(
     "btn", "border",
-    size && size,
-    state && state
+    size && `btn-${size}`,
+    state && `btn-${state}`,
+    classAdd && classAdd
   );
   const Component = tag;
   return (

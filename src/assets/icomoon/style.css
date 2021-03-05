@@ -58,5 +58,5 @@
 }
 .icon-all:before {
   content: "\e90a";
-  color: #00855b;
+  color: #00855b !important;
 }

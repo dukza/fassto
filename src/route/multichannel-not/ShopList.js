@@ -12,9 +12,6 @@ import { LayoutContext } from "../../hooks/context";
 const ShopList = ({nots}) => {
     return(
         <>
-            <div className="filterBar">
-                <a className="btn-plain text-dark font-weight-med">2020.06.05 - 2020.06.05 <i className="fas fa-sort"></i></a>
-            </div>
             <div>
             {nots.map((not)=>{
                return(
