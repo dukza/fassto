@@ -18,7 +18,7 @@ const Intro = ({match,history}) => {
             <div className="navigation bg-white">
                 <a className="btnNav btnNav__l" onClick={() => history.goBack()}><i className="fal fa-chevron-left"></i></a><span>쇼핑몰 연동현황</span>  
             </div>
-            <div className="content">
+            <div className="content bg-white">
                 <div className="d-flex flex-column">
                     {
                         shops.map((shop)=>{

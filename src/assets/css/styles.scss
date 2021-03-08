@@ -285,6 +285,9 @@ label {
     &-dark{
 		background-color: $dark !important;
     }
+    &-white{
+        background-color: #fff;
+    }
     &-hover-lighter{
         &:hover{
             background-color: transparentize($ink, .97);  

@@ -318,6 +318,10 @@ label {
   background-color: #5C5F62 !important;
 }
 
+.bg-white {
+  background-color: #fff;
+}
+
 .bg-hover-lighter:hover {
   background-color: rgba(25, 30, 40, 0.03);
   cursor: pointer;
