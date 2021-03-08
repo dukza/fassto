@@ -9,6 +9,7 @@ const Button = ({
   id,
   tag,
   size,
+  width,
   state,
   item__classname,
   formLabel,
@@ -25,7 +26,8 @@ const Button = ({
     "btn", "border",
     size && `btn-${size}`,
     state && `btn-${state}`,
-    classAdd && classAdd
+    classAdd && classAdd,
+    width && width,
   );
   const Component = tag;
   return (

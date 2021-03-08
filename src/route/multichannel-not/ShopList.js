@@ -24,6 +24,8 @@ const ShopList = ({nots}) => {
                     number={not.number}
                     reason={not.reason}
                     date={not.date}
+                    url={not.url}
+                    icon__classname={not.icon__classname}
                     />
                    </>
                ) 

@@ -16,7 +16,7 @@ function App() {
   return (
 
     <LayoutProvider>
-         <div className="w-100 position-fixed d-flex flex-column" style={{'zIndex':'-1'}}>
+         <div className="w-100 position-fixed d-flex flex-column" style={{'zIndex':'-2'}}>
             <Link className="border-bottom text-decoration-none d-flex align-items-center p16" to="/multichannel">쇼핑몰연동현황 퍼블리싱</Link>
             <Link className="border-bottom text-decoration-none d-flex align-items-center p16" to="/multichannel-not">미연동현황 퍼블리싱</Link>          
          </div>

@@ -16,9 +16,11 @@ const Input = ({
   indicator__classname,
   formWrap__classname,
   form__side,
+  formSide__classname,
   formHint,
   formHint__classname,
   value,
+  width,
   size,
   state,
   ...rest
@@ -26,8 +28,13 @@ const Input = ({
   const classes = classNames(
     "form-control",
     state && `border-${state}`,
-    size && size
+    width && width,
+    size && `form-control-${size}`,
   );
+  const formSideS = classNames(
+    "btn btn-light m8-l",
+    formSide__classname && formSide__classname
+  )
   const Component = type === "textarea" ? "textarea" : "input";
   return (
     <>
@@ -42,7 +49,7 @@ const Input = ({
         )}
         <div className={formWrap__classname}>
           <Component value={value} className={classes} {...rest}></Component>
-          {form__side && <a className="btn btn-light m8-l">{form__side}</a>}
+          {form__side && <a className={formSideS}>{form__side}</a>}
         </div>
       </div>
       {formHint && (

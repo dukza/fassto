@@ -13,6 +13,7 @@ const Select = ({
   indicator,
   indicator__classname,
   size,
+  width,
   status,
   value,
   formWrap__classname,
@@ -20,7 +21,7 @@ const Select = ({
   formHint__classname,
   children
 }) => {
-  const classes = classNames("form-select", size && size, status && status);
+  const classes = classNames("form-select", size && `form-select-${size}` ,width && width, status && status);
 
   return (
     <>

@@ -25,11 +25,9 @@ label {
     margin-bottom: 0 !important;}
 
 .btn,.form-control,.form-select{
-    font-size: 1.3rem !important;
+    font-size: 1.4rem ;
 }
-.form-control{
-    width: auto;
-}
+
 // ::selection { 
 //     background: $brand-blue;
 //     color: #fff;
@@ -296,12 +294,15 @@ label {
     } 
 
 }
+$md:0.7rem;
+$lg:1.1rem;
+$btn-pw:1rem;
 //버튼
 .btn{
     &-plain{
         cursor: pointer;
         text-decoration: none;
-        color: $ink-body !important;
+        color: $ink-dark !important;
         font-size: 1.4rem;
         border-radius: 0.4rem;   
         padding: 0.2rem 0.4rem;     
@@ -326,9 +327,43 @@ label {
         padding-left: 3.1rem;
         padding-right: 3.1rem;
         height: 56px;
-    }    
+    }  
+    &-sm{
+        font-size: 1.4rem;
+    } 
+    &-md{
+        font-size: 1.6rem;
+        padding: $md $btn-pw ;
+    } 
+    &-lg{
+        padding: $md $btn-pw;
+        font-size: 1.6rem;
+    }
 }
-
+$form-pw:0.5rem;
+// 폼
+.form{
+    &-control{
+        font-size: 1.4rem;
+        width: auto;
+    }
+    &-control-md{
+        font-size: 1.6rem;
+        padding: $md $form-pw;
+    }
+    &-control-lg{
+        font-size: 1.6rem;
+        padding: $md $form-pw ;
+    }
+    &-select-md{
+        font-size: 1.6rem;
+        padding: $md $form-pw ;
+    }
+    &-select-lg{
+        font-size: 1.6rem;
+        padding: $md $form-pw ;
+    }
+}
 // 뱃지
 .badge-info{
     background-color: $info !important;
@@ -550,6 +585,9 @@ label {
         margin-left: $value !important;
         margin-right: $value !important;
     }
+    &-0{
+        margin: 0 !important;
+    }
 }      
 @mixin paddingStyle($value) {
     padding: $value !important;
@@ -568,6 +606,9 @@ label {
     &-x{
         padding-left: $value !important;
         padding-right: $value !important;
+    }
+    &-0{
+        padding: 0 !important;
     }
 }  
 @mixin marginAutoStyle() {

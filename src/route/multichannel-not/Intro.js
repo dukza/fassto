@@ -49,7 +49,7 @@ const Intro = ({match,history}) => {
                             return(
                             <span key={shop.id} onClick={()=>toggleShop(shop.id)}>
                                 <div className={classes}>
-                                    <ShopLogo url={shop.url}/>
+                                    <ShopLogo url={shop.url} icon__classname={shop.icon__classname}/>
                                     <div className="icon--text">{shop.name}</div>
                                 </div>
                             </span>

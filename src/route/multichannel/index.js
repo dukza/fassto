@@ -14,7 +14,7 @@ const Multichannel = ({match}) => {
     const { data } = useContext(LayoutContext);
     return(
         <>  
-        <div className="App" id="multichannel">
+        <div className="App bg-white" id="multichannel">
             <AppRoute exact path={match.path} component={Intro}/>  
             <AppRoute path={`${match.path}/:shop`} component={Setup}/>            
         </div>

@@ -51,10 +51,12 @@ const Setup = ({match,history}) => {
                         indicator
                         formWrap__classname={content.formWrap__classname}
                         form__side={content.form__side}
+                        formSide__classname={content.formSide__classname}
                         formHint={content.formHint}
                         formHint__classname={content.formHint__classname}
                         value={content.value}
                         size={content.size}
+                        width={content.width}
                         state=""
                         disabled={content.disabled}
                         />}  
@@ -68,6 +70,7 @@ const Setup = ({match,history}) => {
                         formHint={content.formHint}
                         formHint__classname={content.formHint__classname}
                         size={content.size}
+                        width={content.width}
                         >
                             {content.childrens.map((children,index)=>(
                                 <option key={index}>{children}</option>
@@ -79,6 +82,7 @@ const Setup = ({match,history}) => {
                         tag="button"
                         state={content.state}
                         size={content.size}
+                        width={content.width}
                         item__classname={content.item__classname}
                         formLabel={content.formLabel}
                         formLabel__classname={content.formLabel__classname}

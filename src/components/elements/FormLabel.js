@@ -8,7 +8,7 @@ const FormLabel = ({
 }) => {
   return (
     <>
-      <div className={`formLabel ${formLabel__classname}`}>
+      <div className={`formLabel ${formLabel__classname && formLabel__classname}`}>
         {formLabel}
         {indicator && <span className={`indicator ${indicator__classname}`}></span>}
       </div>

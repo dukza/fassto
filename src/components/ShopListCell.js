@@ -2,7 +2,7 @@
 import React from 'react';
 import ShopLogo from './ShopLogo';
 
-export default function ShopListCell({id,name,phone,state,number,reason,date}){
+export default function ShopListCell({id,name,phone,state,number,reason,date,url,icon__classname}){
     return(
         <>
 
@@ -22,7 +22,7 @@ export default function ShopListCell({id,name,phone,state,number,reason,date}){
                 </div>
                 <div className="d-flex flex-column align-items-end">
                     <div className="mb-auto state">{state}</div>    
-                    <ShopLogo />                      
+                    <ShopLogo url={url} icon__classname={icon__classname}/>                      
                 </div>
             </div>
         </div>
