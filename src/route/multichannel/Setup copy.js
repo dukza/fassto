@@ -11,11 +11,7 @@ import Button from "./../../components/elements/Button";
 import { LayoutContext } from "./../../hooks/context";
 
 const Setup = ({match,history}) => {
-    // const {shop} = useParams();
-    // console.log('match',{match})
     const { menus,setupCommon,setup } = useContext(LayoutContext);
-
-    console.log('useParams',useParams())
     
     // const shop = menus.find(menu => menu.url === match.params.shop);    
     const shop = menus.find(menu => menu.url === match.params.shop);    

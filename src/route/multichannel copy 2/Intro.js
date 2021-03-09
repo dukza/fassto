@@ -9,7 +9,6 @@ import IndexLink from '../../components/IndexLink';
 import { LayoutContext } from "../../hooks/context";
 
 const Intro = ({match,history}) => {
-    // console.log('match',{match})
     const { shops } = useContext(LayoutContext);
     return(
         <>

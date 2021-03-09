@@ -13,7 +13,7 @@ const LayoutProvider = ({children}) => {
         e.preventDefault();
         setModal(!isModal)
     }
-    const ModalWrap = ({title,buttonName,chidren}) => {
+    const ModalWrap = (title,buttonName,chidren) => {
         return(
             <>
                <Modal

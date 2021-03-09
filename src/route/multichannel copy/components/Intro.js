@@ -11,8 +11,6 @@ import { LayoutContext } from "../../../hooks/context";
 const Intro = () => {
     const { data } = useContext(LayoutContext);
     const {id} = useParams();
-    // console.log('data',data.multichannel[0].menus[0].url)
-    console.log({id})
     return(
         <>
         {

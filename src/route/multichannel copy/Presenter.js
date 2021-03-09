@@ -14,7 +14,7 @@ import Setup from "./components/Setup";
 
 const Presenter = ({match}) => {
     const { data } = useContext(LayoutContext);
-    console.log({match})
+
     return(
         <>
             {/* <AppRoute exact path={match.path} component={Intro}/> */}

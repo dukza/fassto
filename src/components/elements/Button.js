@@ -24,8 +24,7 @@ const Button = ({
   formHint,
   formHint__classname,
   status,
-  classAdd,
-  onClick
+  classAdd
 }) => {
   const classes = classNames(
     "btn", "border",
@@ -35,7 +34,6 @@ const Button = ({
     width && width,
   );
   const Component = tag;
-  const { shops ,ModalWrap,toggleModal} = useContext(LayoutContext);
   return (
     <>
       <div key={id} className={`d-flex justify-content-between align-items-center ${item__classname}`}>
@@ -47,7 +45,7 @@ const Button = ({
             indicator__classname={indicator && indicator__classname}
           />
         )}
-        <Component className={classes} disabled={status} onClick={()=>ModalWrap(`${onClick[0]},${onClick[1]},${onClick[2]}`)}>{children}</Component>
+        <Component className={classes} disabled={status}>{children}</Component>
       </div>
       {formHint && (
         <FormHint formHint__classname={formHint__classname}>

@@ -6,7 +6,6 @@ export default function ShopLogo({url,
     const iconS = classNames(
         icon__classname && icon__classname,  `btn-circle--${url}`
     )
-    console.log(icon__classname)
     return(
         <>
         <span className="p-1 d-inline-block icon--wrap">

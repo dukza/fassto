@@ -12,14 +12,9 @@ import { LayoutContext } from "./../../hooks/context";
 
 
 const Setup = ({match,history}) => {
-    // const {shop} = useParams();
-    // console.log('match',{match})
     const { shops } = useContext(LayoutContext);
 
-    console.log('useParams',useParams())
-    
-
-    // const shop = menus.find(menu => menu.url === match.params.shop);    
+  
     const shop = shops.find(shop => shop.url === match.params.shop);    
 
     return(

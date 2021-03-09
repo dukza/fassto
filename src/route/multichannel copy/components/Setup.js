@@ -9,7 +9,6 @@ import { LayoutContext } from "../../../hooks/context";
 
 const Setup = () => {
     const {id} = useParams();
-    console.log('id',{id})
 
     const { data } = useContext(LayoutContext);
 
