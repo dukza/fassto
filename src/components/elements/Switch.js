@@ -37,7 +37,7 @@ const Switch = ({
         <div className={formWrap__classname}>
           <div className={classes}>
             <input
-              className="form-check-input"
+              className="form-check-input form-check-input-md"
               type="checkbox"
               id="flexSwitchCheckChecked" checked={isOn}
               onChange={toggleOn}

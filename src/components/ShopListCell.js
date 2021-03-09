@@ -9,7 +9,7 @@ export default function ShopListCell({id,name,phone,state,number,reason,date,url
         <div key={id} className="p16-t p16-b list border-bottom-lighter">
             <div className="d-flex justify-content-between ">
                 <div style={{"width":"75%"}}>
-                    <div className="text-blue font-12">{number}</div>            
+                    <div className="text-blue font-12 font-weight-med">{number}</div>            
                     <div className="text-dark text-overflow">
                         <div className="text-overflow--wrap font-weight-med">
                         {reason}  

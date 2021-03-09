@@ -39,6 +39,72 @@
                         "date":"2020.06.10 16:00",
                         "url":"smartstore"  ,
                         "icon__classname":"logo"
+                    },
+                    {
+                        "id":4,
+                        "name":"김창배",
+                        "phone":"010-9978-7769",
+                        "number":"주문번호 20200823121212",
+                        "state":"송장등록",
+                        "reason":"통신이 원활하지 않음",
+                        "date":"2020.06.10 16:00",
+                        "url":"sabangnet"  ,
+                        "icon__classname":"logo"
+                    },
+                    {
+                        "id":5,
+                        "name":"하덕연",
+                        "phone":"010-9978-7769",
+                        "number":"주문번호 20200823123344",
+                        "state":"송장등록",
+                        "reason":"주문서의 주소가 유효하지 않음"  ,
+                        "date":"2020.06.10 16:00",
+                        "url":"godo" ,
+                        "icon__classname":"logo" 
+                    },
+                    {
+                        "id":6,
+                        "name":"김다윤",
+                        "phone":"010-9978-7769",
+                        "number":"주문번호 20200823125566",
+                        "state":"송장등록",
+                        "reason":"상품연결이 등록되지 않음"  ,
+                        "date":"2020.06.10 16:00",
+                        "url":"smartstore"  ,
+                        "icon__classname":"logo"
+                    },
+                    {
+                        "id":7,
+                        "name":"김창배",
+                        "phone":"010-9978-7769",
+                        "number":"주문번호 20200823121212",
+                        "state":"송장등록",
+                        "reason":"통신이 원활하지 않음",
+                        "date":"2020.06.10 16:00",
+                        "url":"sabangnet"  ,
+                        "icon__classname":"logo"
+                    },
+                    {
+                        "id":8,
+                        "name":"하덕연",
+                        "phone":"010-9978-7769",
+                        "number":"주문번호 20200823123344",
+                        "state":"송장등록",
+                        "reason":"주문서의 주소가 유효하지 않음"  ,
+                        "date":"2020.06.10 16:00",
+                        "url":"godo" ,
+                        "icon__classname":"logo" 
+                    },
+                    {
+                        "id":9,
+                        "name":"김다윤",
+                        "phone":"010-9978-7769",
+                        "number":"주문번호 20200823125566",
+                        "state":"송장등록",
+                        "reason":"상품연결이 등록되지 않음"  ,
+                        "date":"2020.06.10 16:00",
+                        "url":"sabangnet"  ,
+                        "icon__classname":"logo"
                     }
                 ]
             },{
@@ -101,15 +167,15 @@
                               "indicator" : true ,
                               "formWrap__classname":"w-100 flex-grow-1",
                               "type" : "Input",
-                              "state":"btn-outline-secondary d-flex justify-content-between align-items-center",
+                              "state":"btn-outline-secondary d-flex justify-content-between align-items-center btn-md",
                               "width":"w-100",
                               "size" : "md",
                               "formLabel":"연동 시작일",
                               "formLabel__classname":"formLabel-multichannel",
                               "value" : "YYYY년 MM월 DD일",
                               "formHint"  : "",
-                              "disabled": true
-
+                              "disabled": true,
+                              "onClick":["날짜 선택","적용","캘린더"]
                             }
                         ]
                     }, 
@@ -286,7 +352,6 @@
                     }
                 ],
                 "nots" : [
-
                     {
                         "id":1,
                         "name":"방한경",
@@ -319,7 +384,74 @@
                         "date":"2020.06.10 16:00",
                         "url":"smartstore",
                         "icon__classname":"logo"
+                    },
+                    {
+                        "id":4,
+                        "name":"방한경",
+                        "phone":"010-9978-7769",
+                        "number":"주문번호 12120823123344",
+                        "state":"주문수집",
+                        "reason":"주문수집 대상이 아님"  ,
+                        "date":"2020.06.10 16:00",
+                        "url":"smartstore",
+                        "icon__classname":"logo"
+                    },
+                    {
+                        "id":5,
+                        "name":"김미나",
+                        "phone":"010-3468-7769",
+                        "number":"주문번호 22220823123344",
+                        "state":"송장등록",
+                        "reason":"주문서의 주소가 유효하지 않음"  ,
+                        "date":"2020.06.10 16:00", 
+                        "url":"smartstore",
+                        "icon__classname":"logo"
+                    },
+                    {
+                        "id":6,
+                        "name":"박은식",
+                        "phone":"010-5688-7769",
+                        "number":"주문번호 33440823123344",
+                        "state":"주문수집",
+                        "reason":"재고부족"  ,
+                        "date":"2020.06.10 16:00",
+                        "url":"smartstore",
+                        "icon__classname":"logo"
+                    },
+                    {
+                        "id":7,
+                        "name":"방한경",
+                        "phone":"010-9978-7769",
+                        "number":"주문번호 12120823123344",
+                        "state":"주문수집",
+                        "reason":"주문수집 대상이 아님"  ,
+                        "date":"2020.06.10 16:00",
+                        "url":"smartstore",
+                        "icon__classname":"logo"
+                    },
+                    {
+                        "id":8,
+                        "name":"김미나",
+                        "phone":"010-3468-7769",
+                        "number":"주문번호 22220823123344",
+                        "state":"송장등록",
+                        "reason":"주문서의 주소가 유효하지 않음"  ,
+                        "date":"2020.06.10 16:00", 
+                        "url":"smartstore",
+                        "icon__classname":"logo"
+                    },
+                    {
+                        "id":9,
+                        "name":"박은식",
+                        "phone":"010-5688-7769",
+                        "number":"주문번호 33440823123344",
+                        "state":"주문수집",
+                        "reason":"재고부족"  ,
+                        "date":"2020.06.10 16:00",
+                        "url":"smartstore",
+                        "icon__classname":"logo"
                     }
+
                 ]
             },{
                 "id":2,
@@ -422,14 +554,15 @@
                               "label" : "연동 시작일" ,
                               "indicator" : true ,
                               "type" : "Button",
-                              "state":"btn-outline-secondary d-flex justify-content-between align-items-center",
+                              "state":"btn-outline-secondary d-flex justify-content-between align-items-center btn-lg font-14",
                               "width" : "w-100",
                               "size":"",
                               "formLabel":"연동 시작일","formLabel__classname":"formLabel-multichannel",
                               "formWrap__classname":"w-100 flex-grow-1",
                               "children":"YYYY년 M월 DD일 ",
                               "icon":"calendar",
-                              "formHint"  : ""
+                              "formHint"  : "",
+                              "onClick":["날짜 선택","적용","캘린더"]
                             }
                         ]
                     }, 
@@ -582,6 +715,72 @@
                     },
                     {
                         "id":3,
+                        "name":"서은식",
+                        "phone":"010-9978-7769",
+                        "number":"주문번호 20200823123344",
+                        "state":"주문수집",
+                        "reason":"주문서의 주소가 유효하지 않음"  ,
+                        "date":"2020.06.10 16:00",
+                        "url":"godo",
+                        "icon__classname":"logo"  
+                    },
+                    {
+                        "id":4,
+                        "name":"이이랑",
+                        "phone":"010-9978-7769",
+                        "number":"주문번호 20200823123344",
+                        "state":"주문수집",
+                        "reason":"API 사용 권한 없음"  ,
+                        "date":"2020.06.10 16:00",
+                        "url":"godo",
+                        "icon__classname":"logo"   
+                    },
+                    {
+                        "id":5,
+                        "name":"박미래",
+                        "phone":"010-9978-7769",
+                        "number":"주문번호 20200823123344",
+                        "state":"송장등록",
+                        "reason":"API 사용 권한 없음"  ,
+                        "date":"2020.06.10 16:00",
+                        "url":"godo",
+                        "icon__classname":"logo"   
+                    },
+                    {
+                        "id":6,
+                        "name":"서은식",
+                        "phone":"010-9978-7769",
+                        "number":"주문번호 20200823123344",
+                        "state":"주문수집",
+                        "reason":"주문서의 주소가 유효하지 않음"  ,
+                        "date":"2020.06.10 16:00",
+                        "url":"godo",
+                        "icon__classname":"logo"  
+                    },
+                    {
+                        "id":7,
+                        "name":"이이랑",
+                        "phone":"010-9978-7769",
+                        "number":"주문번호 20200823123344",
+                        "state":"주문수집",
+                        "reason":"API 사용 권한 없음"  ,
+                        "date":"2020.06.10 16:00",
+                        "url":"godo",
+                        "icon__classname":"logo"   
+                    },
+                    {
+                        "id":8,
+                        "name":"박미래",
+                        "phone":"010-9978-7769",
+                        "number":"주문번호 20200823123344",
+                        "state":"송장등록",
+                        "reason":"API 사용 권한 없음"  ,
+                        "date":"2020.06.10 16:00",
+                        "url":"godo",
+                        "icon__classname":"logo"   
+                    },
+                    {
+                        "id":9,
                         "name":"서은식",
                         "phone":"010-9978-7769",
                         "number":"주문번호 20200823123344",
@@ -849,6 +1048,72 @@
                         "date":"2020.06.10 16:00" ,
                         "url":"sabangnet", 
                         "icon__classname":"logo"  
+                    },
+                    {
+                        "id":4,
+                        "name":"김다미",
+                        "phone":"010-0120-7769",
+                        "number":"주문번호 3345823123344",
+                        "state":"송장등록",
+                        "reason":"주문서의 주소가 유효하지 않음"  ,
+                        "date":"2020.06.10 16:00" ,
+                        "url":"sabangnet", 
+                        "icon__classname":"logo"
+                    },
+                    {
+                        "id":5,
+                        "name":"최은기",
+                        "phone":"010-2424-7769",
+                        "number":"주문번호 56750823123344",
+                        "state":"주문수집",
+                        "reason":"통신이 원활하지 않음"  ,
+                        "date":"2020.06.10 16:00",
+                        "url":"sabangnet", 
+                        "icon__classname":"logo"   
+                    },
+                    {
+                        "id":6,
+                        "name":"이미은",
+                        "phone":"010-0970-7769",
+                        "number":"주문번호 01010823123344",
+                        "state":"송장등록",
+                        "reason":"주문상태 변경 대상이 아님"  ,
+                        "date":"2020.06.10 16:00" ,
+                        "url":"sabangnet", 
+                        "icon__classname":"logo"  
+                    },
+                    {
+                        "id":7,
+                        "name":"김다미",
+                        "phone":"010-0120-7769",
+                        "number":"주문번호 3345823123344",
+                        "state":"송장등록",
+                        "reason":"주문서의 주소가 유효하지 않음"  ,
+                        "date":"2020.06.10 16:00" ,
+                        "url":"sabangnet", 
+                        "icon__classname":"logo"
+                    },
+                    {
+                        "id":8,
+                        "name":"최은기",
+                        "phone":"010-2424-7769",
+                        "number":"주문번호 56750823123344",
+                        "state":"주문수집",
+                        "reason":"통신이 원활하지 않음"  ,
+                        "date":"2020.06.10 16:00",
+                        "url":"sabangnet", 
+                        "icon__classname":"logo"   
+                    },
+                    {
+                        "id":9,
+                        "name":"이미은",
+                        "phone":"010-0970-7769",
+                        "number":"주문번호 01010823123344",
+                        "state":"송장등록",
+                        "reason":"주문상태 변경 대상이 아님"  ,
+                        "date":"2020.06.10 16:00" ,
+                        "url":"sabangnet", 
+                        "icon__classname":"logo"  
                     }
                 ]
             },{
@@ -936,7 +1201,8 @@
                               "formLabel":"연동 시작일","formLabel__classname":"formLabel-multichannel",
                               "children":"YYYY년 MM월 DD일 ",
                               "icon":"calendar",
-                              "formHint"  : ""
+                              "formHint"  : "",
+                              "onClick":["날짜 선택","적용","캘린더"]
                             }
                         ]
                     }, 
@@ -1093,6 +1359,74 @@
                     },
                     {
                         "id":3,
+                        "name":"최다은",
+                        "phone":"010-3344-7769",
+                        "number":"주문번호 20200823123344",
+                        "state":"송장등록",
+                        "reason":"주문상태 변경 대상이 아님"  ,
+                        "date":"2020.06.10 16:00",
+                        "url":"shoplinker", 
+                        "icon__classname":"logo"   
+                    },
+                    {
+                        "id":4,
+                        "name":"송은",
+                        "phone":"010-1212-7769",
+                        "number":"주문번호 20200823123344",
+                        "state":"주문등록",
+                        "reason":"통신이 원활하지 않음"  ,
+                        "date":"2020.06.10 16:00",
+                        "url":"shoplinker", 
+                        "icon__classname":"logo"   
+                    },
+                    {
+                        "id":5,
+                        "name":"손현",
+                        "phone":"010-6943-7769",
+                        "number":"주문번호 20200823123344",
+                        "state":"송장등록",
+                        "reason":"주문서의 주소가 유효하지 않음"  ,
+                        "date":"2020.06.10 16:00",
+                        "url":"shoplinker", 
+                        "icon__classname":"logo"
+            
+                    },
+                    {
+                        "id":6,
+                        "name":"최다은",
+                        "phone":"010-3344-7769",
+                        "number":"주문번호 20200823123344",
+                        "state":"송장등록",
+                        "reason":"주문상태 변경 대상이 아님"  ,
+                        "date":"2020.06.10 16:00",
+                        "url":"shoplinker", 
+                        "icon__classname":"logo"   
+                    },
+                    {
+                        "id":7,
+                        "name":"송은",
+                        "phone":"010-1212-7769",
+                        "number":"주문번호 20200823123344",
+                        "state":"주문등록",
+                        "reason":"통신이 원활하지 않음"  ,
+                        "date":"2020.06.10 16:00",
+                        "url":"shoplinker", 
+                        "icon__classname":"logo"   
+                    },
+                    {
+                        "id":8,
+                        "name":"손현",
+                        "phone":"010-6943-7769",
+                        "number":"주문번호 20200823123344",
+                        "state":"송장등록",
+                        "reason":"주문서의 주소가 유효하지 않음"  ,
+                        "date":"2020.06.10 16:00",
+                        "url":"shoplinker", 
+                        "icon__classname":"logo"
+            
+                    },
+                    {
+                        "id":9,
                         "name":"최다은",
                         "phone":"010-3344-7769",
                         "number":"주문번호 20200823123344",

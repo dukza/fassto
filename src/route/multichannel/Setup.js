@@ -1,4 +1,4 @@
-import React,{useContext} from 'react';
+import React,{useContext, useState} from 'react';
 import {
     useParams
   } from "react-router-dom";
@@ -6,6 +6,8 @@ import Input from "./../../components/elements/Input";
 import Select from "./../../components/elements/Select";
 import Switch from "./../../components/elements/Switch";
 import Button from "./../../components/elements/Button";
+
+
 
 //context
 import { LayoutContext } from "./../../hooks/context";
@@ -90,6 +92,7 @@ const Setup = ({match,history}) => {
                         formHint={content.formHint}
                         formHint__classname={content.formHint__classname}
                         disabled={content.disabled}
+                        onClick={content.onClick}
                         >
                         {content.children}{content.icon&& content.icon === "calendar" && <i className="far fa-calendar-check"></i>}
                         </Button>}

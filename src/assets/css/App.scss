@@ -25,15 +25,21 @@ $brand-greenNeonDarkLight:#6add85;
   justify-content: center;
   margin-right: 1.6rem;
   cursor: pointer;
+  .icon--wrap{
+    border: 4px solid transparent;
+    border-radius: 50rem;
+  }
+  
   &.active{
-    .btn-circle--icon{
+    .icon--wrap{
       border: 4px solid $brand-green;
     }
     
   }
   .icon--text{
     text-align: center;
-    color: $ink-body;
+    color: $ink-dark;
+    font-weight: $font-weight-med;
     font-size: 1.2rem;
     margin-top: 0.8rem;
     white-space: pre;
@@ -108,6 +114,7 @@ $brand-greenNeonDarkLight:#6add85;
     align-items: center;
   }
   .state{
+    color: $ink-dark;
     font-size: 1.2rem;
     font-weight: 500;
   }
@@ -119,7 +126,7 @@ $brand-greenNeonDarkLight:#6add85;
    }
    .logo{
      background-color: transparent !important;
-     font-size: 2.4rem;
+     font-size: 2.8rem;
      & .icon-shoplinker span:before{
       color: rgb(246, 139, 31) !important;
     }   

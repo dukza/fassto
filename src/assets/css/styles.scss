@@ -363,6 +363,10 @@ $form-pw:0.5rem;
         font-size: 1.6rem;
         padding: $md $form-pw ;
     }
+    &-check-input-md{
+        height: 2.8rem !important;
+        width: 5.2rem !important;
+    }
 }
 // 뱃지
 .badge-info{

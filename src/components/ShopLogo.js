@@ -9,9 +9,11 @@ export default function ShopLogo({url,
     console.log(icon__classname)
     return(
         <>
-        <span className={iconS}>
-            {url ==="shoplinker" ? <span className="icon--icon icon-shoplinker"><span className="path1"></span><span className="path2"></span><span className="path3"></span><span className="path4"></span><span className="path5"></span><span className="path6"></span><span className="path7"></span></span>:
-                <span className={`icon--icon icon-${url}`}></span>}
+        <span className="p-1 d-inline-block icon--wrap">
+            <span className={iconS}>
+                {url ==="shoplinker" ? <span className="icon--icon icon-shoplinker"><span className="path1"></span><span className="path2"></span><span className="path3"></span><span className="path4"></span><span className="path5"></span><span className="path6"></span><span className="path7"></span></span>:
+                    <span className={`icon--icon icon-${url}`}></span>}
+            </span>
         </span>
         </>
     )

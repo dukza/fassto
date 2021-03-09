@@ -1,9 +1,13 @@
-import React, { Children } from "react";
+import React, { useContext } from "react";
 import classNames from "classnames";
 
 //component
 import FormLabel from "./FormLabel";
 import FormHint from "./FormHint";
+
+//context
+import { LayoutContext } from "./../../hooks/context";
+
 
 const Button = ({
   id,
@@ -20,7 +24,8 @@ const Button = ({
   formHint,
   formHint__classname,
   status,
-  classAdd
+  classAdd,
+  onClick
 }) => {
   const classes = classNames(
     "btn", "border",
@@ -30,6 +35,7 @@ const Button = ({
     width && width,
   );
   const Component = tag;
+  const { shops ,ModalWrap,toggleModal} = useContext(LayoutContext);
   return (
     <>
       <div key={id} className={`d-flex justify-content-between align-items-center ${item__classname}`}>
@@ -41,7 +47,7 @@ const Button = ({
             indicator__classname={indicator && indicator__classname}
           />
         )}
-        <Component className={classes} disabled={status}>{children}</Component>
+        <Component className={classes} disabled={status} onClick={()=>ModalWrap(`${onClick[0]},${onClick[1]},${onClick[2]}`)}>{children}</Component>
       </div>
       {formHint && (
         <FormHint formHint__classname={formHint__classname}>
