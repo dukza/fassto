@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/fassto/static/css/main.7c346073.chunk.css",
-    "main.js": "/fassto/static/js/main.eae5d001.chunk.js",
-    "main.js.map": "/fassto/static/js/main.eae5d001.chunk.js.map",
+    "main.css": "/fassto/static/css/main.75be556a.chunk.css",
+    "main.js": "/fassto/static/js/main.96fab52d.chunk.js",
+    "main.js.map": "/fassto/static/js/main.96fab52d.chunk.js.map",
     "runtime-main.js": "/fassto/static/js/runtime-main.1028c76c.js",
     "runtime-main.js.map": "/fassto/static/js/runtime-main.1028c76c.js.map",
-    "static/js/2.838d93f9.chunk.js": "/fassto/static/js/2.838d93f9.chunk.js",
-    "static/js/2.838d93f9.chunk.js.map": "/fassto/static/js/2.838d93f9.chunk.js.map",
+    "static/js/2.467529e2.chunk.js": "/fassto/static/js/2.467529e2.chunk.js",
+    "static/js/2.467529e2.chunk.js.map": "/fassto/static/js/2.467529e2.chunk.js.map",
     "index.html": "/fassto/index.html",
-    "static/css/main.7c346073.chunk.css.map": "/fassto/static/css/main.7c346073.chunk.css.map",
-    "static/js/2.838d93f9.chunk.js.LICENSE.txt": "/fassto/static/js/2.838d93f9.chunk.js.LICENSE.txt",
+    "static/css/main.75be556a.chunk.css.map": "/fassto/static/css/main.75be556a.chunk.css.map",
+    "static/js/2.467529e2.chunk.js.LICENSE.txt": "/fassto/static/js/2.467529e2.chunk.js.LICENSE.txt",
     "static/media/styles.css": "/fassto/static/media/icomoon.f2b96bda.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.1028c76c.js",
-    "static/js/2.838d93f9.chunk.js",
-    "static/css/main.7c346073.chunk.css",
-    "static/js/main.eae5d001.chunk.js"
+    "static/js/2.467529e2.chunk.js",
+    "static/css/main.75be556a.chunk.css",
+    "static/js/main.96fab52d.chunk.js"
   ]
 }
